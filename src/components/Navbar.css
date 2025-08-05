@@ -98,8 +98,12 @@
     display: flex;
   }
 
-  .nav-logo-img {
-    height: 70px;
+  .nav-logo {
+    display: none;
+  }
+
+  .nav-container {
+    justify-content: flex-end;
   }
 
   .nav-menu {
