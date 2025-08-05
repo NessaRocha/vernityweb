@@ -47,6 +47,13 @@ const Navbar = () => {
             src="/images/logo.svg" 
             alt="Vernity Web" 
             className="nav-logo-img"
+            onError={(e) => {
+              console.error('Erro ao carregar logo:', e.target.src);
+              e.target.style.display = 'none';
+            }}
+            onLoad={() => {
+              console.log('Logo carregado com sucesso:', '/images/logo.svg');
+            }}
           />
           <h2 style={{ display: 'none' }}>Vernity Web</h2>
         </motion.div>

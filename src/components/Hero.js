@@ -123,6 +123,13 @@ const Hero = () => {
                    animate={{ opacity: 1, scale: 1 }}
                    transition={{ duration: 1, delay: 1.2, ease: "easeOut" }}
                    whileHover={{ scale: 1.02 }}
+                   onError={(e) => {
+                     console.error('Erro ao carregar imagem:', e.target.src);
+                     e.target.style.display = 'none';
+                   }}
+                   onLoad={() => {
+                     console.log('Imagem carregada com sucesso:', '/images/banner.webp');
+                   }}
                  />
                 <div className="profile-placeholder" style={{ display: 'none' }}>
                   <svg width="200" height="200" viewBox="0 0 200 200">
