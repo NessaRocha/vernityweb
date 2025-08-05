@@ -115,10 +115,10 @@ const Hero = () => {
                   transition: { duration: 0.4, ease: "easeOut" }
                 }}
               >
-                                 <motion.img 
-                   src="/images/favicon_io (11)/banner.webp" 
-                   alt="Vernity Web - Desenvolvedora Web" 
-                   className="profile-img"
+                                                 <motion.img 
+                  src="/images/banner.webp" 
+                  alt="Vernity Web - Desenvolvedora Web" 
+                  className="profile-img"
                    initial={{ opacity: 0, scale: 0.95 }}
                    animate={{ opacity: 1, scale: 1 }}
                    transition={{ duration: 1, delay: 1.2, ease: "easeOut" }}
