@@ -1,0 +1,20 @@
+{
+  "short_name": "Vernity Web",
+  "name": "Vernity Web - Desenvolvimento Web Profissional",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "96x96 48x48 36x36 24x24",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon-large.ico",
+      "sizes": "288x288 144x144 72x72",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#0a0a0a"
+} 
