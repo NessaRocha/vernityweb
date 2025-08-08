@@ -1,4 +1,0 @@
-[33m2c6d467[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m Atualiza dependências e reduz warnings
-[33m9e5ffe2[m Corrige warnings do ESLint e otimiza build
-[33m562c9b5[m Adiciona configuração do Vercel e corrige build
-[33m78e6833[m Initial commit: Vernity Web Portfolio - React site with modern design
