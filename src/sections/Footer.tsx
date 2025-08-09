@@ -2,23 +2,10 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { FooterProps } from '@/views/homepage/types'
 
-export default function Footer() {
+export default function Footer({ data }: { data: FooterProps }) {
   const currentYear = new Date().getFullYear()
-
-  const quickLinks = [
-    { name: 'Início', href: '#home' },
-    { name: 'Sobre', href: '#about' },
-    { name: 'Serviços', href: '#services' },
-    { name: 'Portfólio', href: '#portfolio' }
-  ]
-
-  const socialLinks = [
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/nessarocha' },
-    { name: 'GitHub', url: 'https://github.com/NessaRocha' },
-    { name: 'WhatsApp', url: 'https://wa.me/5551996138467' },
-    { name: 'Instagram', url: 'https://instagram.com/vernityweb' }
-  ]
 
   return (
     <footer className="bg-black border-t border-gray-800">
@@ -34,15 +21,15 @@ export default function Footer() {
           >
             <div className="mb-4">
               <Image
-                src="/images/logo.svg"
-                alt="Vernity Web"
-                width={150}
-                height={50}
+                src={data.logo.src}
+                alt={data.logo.alt}
+                width={data.logo.width}
+                height={data.logo.height}
                 className="h-12 md:h-16 w-auto object-contain mx-auto md:mx-0"
               />
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Desenvolvimento que traduz sua marca em performance, elegância e resultados.
+              {data.description}
             </p>
           </motion.div>
 
@@ -55,7 +42,7 @@ export default function Footer() {
           >
             <h3 className="text-lg font-bold text-white mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
-              {quickLinks.map((link, index) => (
+              {data.quickLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
@@ -77,7 +64,7 @@ export default function Footer() {
           >
             <h3 className="text-lg font-bold text-white mb-4">Redes Sociais</h3>
             <ul className="space-y-2">
-              {socialLinks.map((social, index) => (
+              {data.socialLinks.map((social) => (
                 <li key={social.name}>
                   <a
                     href={social.url}
@@ -101,7 +88,7 @@ export default function Footer() {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <p className="text-white font-medium">
-            &copy; {currentYear} Vernity Web. Todos os direitos reservados.
+            &copy; {currentYear} {data.copyright.text}
           </p>
         </motion.div>
       </div>

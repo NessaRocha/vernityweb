@@ -1,0 +1,29 @@
+# 🔒 Editor Configuration - Zenyth Architecture Protection
+
+root = true
+
+# Configurações gerais
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Arquivos editáveis (apenas data)
+[src/views/*/data.ts]
+indent_style = space
+indent_size = 2
+
+# Arquivos protegidos (components, sections, lib)
+[src/{components,sections,lib}/**/*.{ts,tsx}]
+# Estes arquivos são protegidos pela arquitetura Zenyth
+# Edite apenas os arquivos data.ts para alterar conteúdo
+
+[src/components/**/*.{ts,tsx}]
+# 🔒 COMPONENTES PROTEGIDOS - Não editar
+
+[src/sections/**/*.{ts,tsx}]
+# 🔒 SECTIONS PROTEGIDAS - Não editar
+
+[src/lib/**/*.{ts,tsx}]
+# 🔒 UTILITÁRIOS PROTEGIDOS - Não editar
