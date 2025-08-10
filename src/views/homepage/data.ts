@@ -19,12 +19,12 @@ export const navbarData = {
 export const heroData = {
   title: {
     lines: [
-      { text: 'DESENVOLVIMENTO', color: 'white' },
-      { text: 'QUE TRADUZ', color: 'red' },
-      { text: 'SUA MARCA EM', color: 'white' },
-      { text: 'PERFORMANCE,', color: 'red' },
-      { text: 'ELEGÂNCIA E', color: 'white' },
-      { text: 'RESULTADOS.', color: 'red' }
+      { text: 'DESENVOLVIMENTO', color: 'white' as const },
+      { text: 'QUE TRADUZ', color: 'red' as const },
+      { text: 'SUA MARCA EM', color: 'white' as const },
+      { text: 'PERFORMANCE,', color: 'red' as const },
+      { text: 'ELEGÂNCIA E', color: 'white' as const },
+      { text: 'RESULTADOS.', color: 'red' as const }
     ]
   },
   description: 'Sou uma desenvolvedora web profissional\nespecializada em criar soluções digitais únicas.',

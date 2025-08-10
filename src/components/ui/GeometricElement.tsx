@@ -47,7 +47,7 @@ const GeometricElement = React.forwardRef<HTMLDivElement, GeometricElementProps>
       <motion.div
         ref={ref}
         className={`geometric-element absolute ${className || ''}`}
-        animate={animateProps}
+        animate={animateProps as any}
         transition={{
           duration: finalAnimation.duration,
           repeat: Infinity,

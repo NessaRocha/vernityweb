@@ -57,7 +57,6 @@ export default function Portfolio({ data }: { data: PortfolioProps }) {
                   description={project.description}
                   image={project.image}
                   url={project.url}
-                  tech={project.tech}
                 />
               </motion.div>
             ))}

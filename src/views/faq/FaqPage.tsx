@@ -49,11 +49,9 @@ export default function FaqPage() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <SectionTitle 
-            title="Perguntas"
-            highlight="Frequentes"
-            subtitle="Tire suas dúvidas sobre nossos serviços"
-          />
+          <SectionTitle>
+            Perguntas <span className="text-gradient">Frequentes</span>
+          </SectionTitle>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">

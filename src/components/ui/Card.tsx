@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 interface CardProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   icon?: React.ReactNode;
   title?: string;
   description?: string;
