@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   keywords: 'desenvolvimento web, React, Next.js, TypeScript, Tailwind CSS',
   authors: [{ name: 'Vernity Web' }],
   robots: 'index, follow',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   openGraph: {
     title: 'Vernity Web - Desenvolvimento Web Profissional',
     description: 'Desenvolvimento que traduz sua marca em performance, elegância e resultados.',
@@ -30,10 +35,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
-      </head>
       <body className={`${inter.className} bg-black text-white antialiased`}>
         {children}
       </body>
