@@ -37,6 +37,13 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
             </div>
           </motion.div>
         )}
+        
+        {/* Debug: Mostrar se ícone existe */}
+        {!icon && (
+          <div className="mb-6 flex justify-center">
+            <div className="text-red-500 text-2xl">🔍</div>
+          </div>
+        )}
 
         {/* Content */}
         <div className="relative z-10">
