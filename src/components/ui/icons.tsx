@@ -52,10 +52,13 @@ export const IconComponents = {
 }
 
 export const getIcon = (iconName: string, className?: string) => {
+  console.log(`Tentando renderizar ícone: ${iconName}`)
   const IconComponent = IconComponents[iconName as keyof typeof IconComponents]
   if (!IconComponent) {
     console.warn(`Ícone não encontrado: ${iconName}`)
+    console.log('Ícones disponíveis:', Object.keys(IconComponents))
     return null
   }
+  console.log(`Ícone encontrado: ${iconName}`)
   return <IconComponent className={className} />
 }

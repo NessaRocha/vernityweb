@@ -31,10 +31,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="48x48" />
-        <link rel="icon" href="/favicon-large.ico" sizes="72x72" />
-        <link rel="icon" href="/favicon-large.ico" sizes="96x96" />
-        <link rel="apple-touch-icon" href="/favicon-large.ico" sizes="270x270" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
       </head>
       <body className={`${inter.className} bg-black text-white antialiased`}>
         {children}
