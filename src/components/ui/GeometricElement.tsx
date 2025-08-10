@@ -47,6 +47,7 @@ const GeometricElement = React.forwardRef<HTMLDivElement, GeometricElementProps>
       <motion.div
         ref={ref}
         className={`geometric-element absolute ${className || ''}`}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         animate={animateProps as any}
         transition={{
           duration: finalAnimation.duration,
