@@ -1,0 +1,168 @@
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+
+
+## Terminal Navigation Commands
+
+### Step 1: Open Terminal and Select Bash
+- Open your terminal/command prompt
+- If you have multiple shell options, select **Bash**
+
+### Step 2: Navigate to Your Projects Folder
+Based on your workspace, you're currently in `/c%3A/Users/aspil/Documents/projects/**ADK/**_landingpage`
+
+### Step 3: Use These Commands to Navigate
+
+**To see what's in the current folder:**
+```bash
+ls
+```
+
+**To enter a folder:**
+```bash
+cd folder_name
+```
+
+**To go back to the parent folder:**
+```bash
+cd ..
+```
+
+**To create a new folder:**
+```bash
+mkdir folder_name
+```
+
+### Example Navigation Path:
+```bash
+# See current contents
+ls
+
+# Enter the landingpage folder
+cd landingpage
+
+# See what's inside landingpage
+ls
+
+# Go back to parent folder
+cd ..
+
+# Enter the **group folder
+cd **group
+
+# Create a new folder (if needed)
+mkdir my_new_folder
+```
+
+
+**Installing the project**
+```bash
+# Clone the repository
+git clone https://github.com/username/repository.git my-project
+
+# Navigate into the project
+cd my-project
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+## Getting Started
+
+```bash
+# This commands runs the project in the browser with live reload
+npm run dev
+```
+
+Open `http://localhost:3000` with your browser to see the result.
+
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+
+
+## Terminal Navigation Commands
+
+### Step 1: Open Terminal and Select Bash
+- Open your terminal/command prompt
+- If you have multiple shell options, select **Bash**
+
+### Step 2: Navigate to Your Projects Folder
+Based on your workspace, you're currently in `/c%3A/Users/aspil/Documents/projects/**ADK/**_landingpage`
+
+### Step 3: Use These Commands to Navigate
+
+**To see what's in the current folder:**
+```bash
+ls
+```
+
+**To enter a folder:**
+```bash
+cd folder_name
+```
+
+**To go back to the parent folder:**
+```bash
+cd ..
+```
+
+**To create a new folder:**
+```bash
+mkdir folder_name
+```
+
+### Example Navigation Path:
+```bash
+# See current contents
+ls
+
+# Enter the landingpage folder
+cd landingpage
+
+# See what's inside landingpage
+ls
+
+# Go back to parent folder
+cd ..
+
+# Enter the **group folder
+cd **group
+
+# Create a new folder (if needed)
+mkdir my_new_folder
+```
+
+
+**Installing the project**
+```bash
+# Clone the repository
+git clone https://github.com/username/repository.git my-project
+
+# Navigate into the project
+cd my-project
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+## Getting Started
+
+```bash
+# This commands runs the project in the browser with live reload
+npm run dev
+```
+
+Open `http://localhost:3000` with your browser to see the result.
+
+
+
+Open `http://localhost:3000` with your browser to see the result.
+
+

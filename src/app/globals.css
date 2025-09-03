@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+}
+
+/* Animações modernas para o texto do banner - OTIMIZADAS para composição */
+@keyframes banner-render-fade {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0) scale(0.95);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes banner-render-zoom {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0.6) rotateX(-15deg);
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1) rotateX(0deg);
+    filter: blur(0px);
+  }
+}
+
+.banner-render-fade {
+  animation: banner-render-fade 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity, filter;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.banner-render-zoom {
+  animation: banner-render-zoom 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  will-change: transform, opacity, filter;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+/* Delays escalonados para grupos de palavras */
+.banner-group-1 { animation-delay: 0.5s; }
+.banner-group-2 { animation-delay: 2.5s; }
+.banner-group-3 { animation-delay: 4.5s; }
+.banner-group-4 { animation-delay: 6.5s; }
+.banner-group-5 { animation-delay: 8.5s; }
+.banner-group-6 { animation-delay: 10.5s; }
+
+/* Prevenir flicker em imagens - SEM bloquear transições */
+img, 
+[data-nimg],
+[data-nimg-intrinsic],
+[data-nimg-fill],
+[data-nimg-sizes] {
+  opacity: 1 !important;
+  animation: none !important;
+  will-change: auto !important;
+}
+
+/* Prevenir flicker no favicon - SEM bloquear transições */
+link[rel="icon"],
+link[rel="shortcut icon"],
+link[rel="apple-touch-icon"] {
+  opacity: 1 !important;
+  animation: none !important;
+}
+
+/* Animações para o portfólio - OTIMIZADAS para composição */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+/* Classe para elementos visíveis apenas para screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Prevenir apenas animações não intencionais - PERMITIR transições CSS */
+*:not(.banner-render-fade):not(.banner-render-zoom):not(.animate-fade-in-up):not(.animate-slide-in-left):not(.animate-slide-in-right) {
+  /* Permitir transições CSS normais */
+  transition: all 0.3s ease-out !important;
+  /* Bloquear apenas animações não intencionais */
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+}
+
+/* Permitir animações específicas do banner */
+.banner-render-fade,
+.banner-render-zoom {
+  animation-duration: 1.5s !important;
+  animation-delay: inherit !important;
+  animation-fill-mode: forwards !important;
+  animation-timing-function: inherit !important;
+}
+
+/* Permitir transições em elementos interativos */
+button,
+a,
+[role="button"],
+[role="menuitem"],
+[tabindex] {
+  transition: all 0.3s ease-out !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+/* Permitir transições em cards e elementos com hover */
+.group:hover,
+.hover\:scale-105:hover,
+.hover\:translate-x-1:hover,
+.hover\:bg-black\/80:hover,
+.hover\:shadow-2xl:hover,
+.hover\:border:hover {
+  transition: all 0.3s ease-out !important;
+}
+
+/* Permitir transições em estados active e focus */
+.active\:scale-105:active,
+.active\:translate-x-1:active,
+.active\:bg-gray-600:active,
+.active\:text-white:active,
+.focus\:scale-105:focus,
+.focus\:bg-gray-600:focus,
+.focus\:text-white:focus {
+  transition: all 0.3s ease-out !important;
+}
+
+/* Media query para dispositivos touch - forçar hover em mobile */
+@media (hover: none) and (pointer: coarse) {
+  .group:hover,
+  .hover\:scale-105:hover,
+  .hover\:translate-x-1:hover,
+  .hover\:bg-black\/80:hover,
+  .hover\:shadow-2xl:hover,
+  .hover\:border:hover {
+    transition: all 0.3s ease-out !important;
+  }
+  
+  /* Forçar hover em cards de serviços */
+  .group:active,
+  .group:focus {
+    transform: scale(1.05) !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    box-shadow: 0 25px 50px -12px rgba(239, 68, 68, 0.2) !important;
+    border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    border-radius: 0 !important;
+  }
+  
+  /* Forçar hover em ícones */
+  .group:active .group-hover\:scale-125,
+  .group:focus .group-hover\:scale-125 {
+    transform: scale(1.25) !important;
+  }
+}
+
+
+
+
+

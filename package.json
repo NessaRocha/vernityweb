@@ -1,0 +1,37 @@
+{
+  "name": "landingpage",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "preview": "npm run build && serve out",
+    "build:static": "npm run build && npm run fix-paths",
+    "fix-paths": "node scripts/fix-paths.js",
+    "perf:prod": "next build && next start -p 4000",
+    "analyze": "set ANALYZE=true && npm run build"
+  },
+  "dependencies": {
+    "next": "15.4.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@next/bundle-analyzer": "^15.5.2",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "css-loader": "^6.10.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.6",
+    "serve": "^14.2.4",
+    "style-loader": "^3.3.4",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "webpack-bundle-analyzer": "^4.10.2"
+  }
+}

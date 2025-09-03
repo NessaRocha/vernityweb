@@ -1,0 +1,7 @@
+---
+globs: *.tsx,*.json,*.ts,*.md,*.mdc,*.js
+alwaysApply: false
+---
+# For every prompt
+
+1. Never run commands, always provide the command so the developer can copy and paste the command themselfs

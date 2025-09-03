@@ -1,0 +1,99 @@
+---
+globs: *.tsx,*.json,*.ts,*.md,*.mdc,*.js
+alwaysApply: false
+---
+# Project Architecture
+
+Our project follows a clear organization pattern:
+
+## Views
+**Views** represent the pages - all content is organized by pages and lives under `landingpage/src/views`
+
+## Sections
+**Sections** are used by the pages and live in `landingpage/src/sections`
+
+## Components
+**Components** like buttons, disclosure, headings, etc. live in `landingpage/src/components/ui`
+
+## Example Structure:
+- `views/homepage/index.tsx` - Homepage content
+- `sections/Hero.tsx` - Hero section used by homepage
+- `components/ui/Button.tsx` - Button component used by sections
+
+## File Organization:
+```
+src/
+├── views/          # Page content organized by pages
+│   ├── homepage/   # Homepage specific content
+├── sections/       # Reusable sections used by pages
+│   ├── Hero.tsx
+│   ├── Features.tsx
+│   ├── CTA.tsx
+│   └── ...
+├── components/ui/  # Reusable UI components
+│   ├── Button.tsx
+│   ├── Heading.tsx
+│   ├── Text.tsx
+│   └── ...
+└── templates/      # Template components with custom styling
+    ├── a11yalt/    # Accessibility alternative template
+    │   ├── page.tsx          # HTML structure for the template
+    │   ├── script.js         # Template-specific JavaScript
+    │   ├── styles.css        # Template-specific CSS
+    │   └── styles/           # Additional style modules
+    └── ...
+```
+
+Note about templates:
+- Templates can use their own CSS and JavaScript instead of Tailwind
+- While they can use shared components (like Button), they typically have their own structure
+- Each template is essentially a large section that may contain multiple subsections
+
+## SEO Architecture
+
+The project uses a two-level SEO structure for optimal AI and search engine optimization:
+
+### Global SEO Configuration
+Located in `src/app/seo.config.ts`
+```
+src/
+├── app/
+    ├── seo.config.ts    # Global SEO configuration
+```
+
+**Purpose:**
+- Site-wide SEO settings
+- Organization information
+- Global structured data
+- Technical SEO configurations
+- Site navigation structure
+- Common metadata
+- Company-wide credentials and services
+
+### Page-Specific SEO
+Located in each view's directory as `seo.ts`
+```
+src/
+├── views/
+    ├── homepage/
+    │   └── seo.ts      # Homepage-specific SEO
+
+    └── ...
+```
+
+**Purpose:**
+- Page-specific meta titles and descriptions
+- Feature-specific structured data
+- Page-level Q&As
+- Specific use cases and examples
+- Page-relevant testimonials
+- Feature lists and benefits
+- Product-specific information
+
+### Implementation Details:
+- Global SEO is applied through `src/app/layout.tsx`
+- Page SEO extends global settings
+- Each page can override global defaults
+- Structured data is properly nested and referenced
+- AI-optimized with clear hierarchies
+- Follows Schema.org standards

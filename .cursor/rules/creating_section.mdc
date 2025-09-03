@@ -1,0 +1,90 @@
+---
+globs: *.tsx,*.json,*.ts,*.md,*.mdc,*.js
+alwaysApply: false
+---
+# Creating Sections
+
+To create a new section:
+
+1. Create `section_name.tsx` under `landingpage\src\sections`
+
+2. Use the components from `landingpage\src\components\ui`
+
+3. To create content always use icons from `landingpage\public\assets\icons`
+
+4. The section name must always be generic for reusability, ex. `Grid.tsx`, `Table.tsx`, `Video.tsx`, etc.
+
+5. A screenshot will be provided. If not, please ask for one before building the section.
+
+6. When a new component is necessary (like tabs), create it under `landingpage\src\components\ui` following the approach used in the other components. must be consulted in W3.org page for the accessible patterns.
+
+7. Check `landingpage\variables.md` to create new components respecting paddings, sizes, colors etc for consistency.
+
+8. Update SEO Configuration:
+   
+   a) Update the page's `seo.ts` file with:
+      - Add new section's key features to `jsonLd.featureList`
+      - Add relevant Q&As about the section to `jsonLd.commonQuestions`
+      - Update use cases if the section demonstrates new capabilities
+      - Add any new statistics or proof points
+   
+   Example for a new Features section:
+   ```typescript
+   // src/views/homepage/seo.tsf
+   jsonLd: {
+     // ... existing config
+     "featureList": [
+       // Add new features shown in the section
+       "AI-powered feature detection",
+       "Real-time accessibility monitoring"
+     ],
+     "commonQuestions": [
+       {
+         "question": "What features does ** offer?",
+"answer": "** includes [features from new section]..."
+       }
+     ],
+     "usageExamples": [
+       {
+         "scenario": "New Use Case",
+         "solution": "Feature from new section",
+         "result": "Measurable outcome"
+       }
+     ]
+   }
+   ```
+
+   b) If the section introduces new product capabilities, update global SEO:
+      - Add to `seo.config.ts` under relevant categories
+      - Update organization's `knowsAbout` list if needed
+      - Add to global service offerings if applicable
+
+   Example for global updates:
+   ```typescript
+   // src/app/seo.config.ts
+   export const globalSEO = {
+     // ... existing config
+     "schema:organization": {
+       "knowsAbout": [
+         // Add new expertise areas
+         "New Feature Category",
+       ],
+       "offers": {
+         "itemOffered": [
+           {
+             "@type": "Service",
+             "name": "New Feature",
+             "description": "Description of new capability"
+           }
+         ]
+       }
+     }
+   }
+   ```
+
+9. SEO Content Guidelines for Sections:
+   - Use semantic HTML elements for better AI understanding
+   - Include descriptive headings and text content
+   - Ensure all features and benefits are clearly stated
+   - Add proper ARIA labels for accessibility
+   - Use Schema.org vocabulary in class names where applicable

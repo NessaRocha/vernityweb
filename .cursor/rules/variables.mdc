@@ -1,0 +1,98 @@
+---
+globs: *.tsx,*.json,*.ts,*.md,*.mdc,*.js
+alwaysApply: false
+---
+# Design Variables
+
+## Colors
+
+### Primary Colors
+- **Primary:** `#53389e`
+- **Primary Light:** `#cac6ec`
+- **Secondary:** `#344054`
+- **light background:** `#eeecf8`
+ 
+
+### Status Colors
+- **Red:** `#b42318`
+- **Green:** `#027a48`
+
+### Grey Patterns
+- **Light Grey:** `#f9fafb`
+- **Medium Grey:** `#667085`
+- **Dark Grey:** `#101828`
+- **Border Grey:** `#d0d5dd`
+
+### Dark Colors
+- **Dark Primary:** `#1d2939`
+- **Dark Secondary:** `#475467`
+- **Dark Background:** `#0c111d`
+
+## Typography
+
+### Heading Sizes
+- **H1:** `4.5rem` (72px)
+- **H2:** `3rem` (48px)
+- **H3:** `1.875rem` (30px)
+
+### Paragraph
+- **Font Size:** `1.25rem` (20px)
+- **Line Height:** `1.75rem` (28px)
+
+## Button Styling
+
+### Default Button
+- **Padding:** `.625rem 1.125rem` (10px 18px)
+- **Border Radius:** `.5rem` (8px)
+- **Font Size:** `1rem` (16px)
+- **Font Weight:** `700`
+- **Line Height:** `1.5`
+# Design Variables
+
+## Colors
+
+### Primary Colors
+- **Primary:** `#53389e`
+- **Primary Light:** `#cac6ec`
+- **Secondary:** `#344054`
+- **light background:** `#eeecf8`
+ 
+
+### Status Colors
+- **Red:** `#b42318`
+- **Green:** `#027a48`
+
+### Grey Patterns
+- **Light Grey:** `#f9fafb`
+- **Medium Grey:** `#667085`
+- **Dark Grey:** `#101828`
+- **Border Grey:** `#d0d5dd`
+
+### Dark Colors
+- **Dark Primary:** `#1d2939`
+- **Dark Secondary:** `#475467`
+- **Dark Background:** `#0c111d`
+
+## Typography
+
+### Heading Sizes
+- **H1:** `4.5rem` (72px)
+- **H2:** `3rem` (48px)
+- **H3:** `1.875rem` (30px)
+
+### Paragraph
+- **Font Size:** `1.25rem` (20px)
+- **Line Height:** `1.75rem` (28px)
+
+## Button Styling
+
+### Default Button
+- **Padding:** `.625rem 1.125rem` (10px 18px)
+- **Border Radius:** `.5rem` (8px)
+- **Font Size:** `1rem` (16px)
+- **Font Weight:** `700`
+- **Line Height:** `1.5`
+
+## Font Families
+
+- **Main**: ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"
