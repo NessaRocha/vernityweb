@@ -18,7 +18,6 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
-  swcMinify: true,
   reactStrictMode: true,
   webpack: (config, { isServer, dev }) => {
     // Desabilitar DevTools webpack

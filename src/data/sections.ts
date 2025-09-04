@@ -30,7 +30,7 @@ export const sectionsData = {
     },
     skills: [
       "React", "Next.js", "TypeScript", "Tailwind CSS",
-      "WordPress", "PHP", "Node.js", "Git",
+      "WordPress", "PHP", "Python", "Node.js", "Git",
       "Responsive Design", "SEO", "Performance", "Acessibilidade"
     ]
   },

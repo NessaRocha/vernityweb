@@ -16,7 +16,10 @@ export const homepageData = {
     },
     skills: [
       "React.js",
+      "Next.js",
       "Node.js", 
+      "PHP",
+      "Python",
       "WordPress",
       "Shopify",
       "JavaScript",
