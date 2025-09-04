@@ -1,9 +1,22 @@
 import type { Metadata, Viewport } from "next";
 
 export const siteConfig = {
-  name: "**",
-url: "https://**.com",
-orgName: "** Technologies",
+  name: "Vernity Web",
+  orgName: "Vernity Web",
+  url: "https://**.com",
+  email: "nessasim@hotmail.com",
+  phone: "+55-51-99613-8467",
+  address: {
+    street: "Porto Alegre",
+    city: "Porto Alegre",
+    state: "RS",
+    country: "Brasil",
+    zipCode: "90000-000"
+  },
+  coordinates: {
+    latitude: -29.6868,
+    longitude: -50.4319
+  }
 };
 
 export const globalViewport: Viewport = {

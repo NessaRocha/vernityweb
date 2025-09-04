@@ -16,10 +16,10 @@ export default function Banner() {
            fill
            className="object-cover object-center"
            priority
-           fetchPriority="high"
-           loading="eager"
-           decoding="sync"
-           style={{ animation: 'none' }}
+           sizes="(max-width: 768px) 100vw, 50vw"
+           quality={75}
+           placeholder="blur"
+           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
          />
         
         {/* Overlay sombreado para mesclar com o fundo */}
@@ -49,29 +49,29 @@ export default function Banner() {
       <Container className="relative z-10 h-full flex items-center px-4 md:px-8 lg:px-16">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-16 lg:gap-20 items-center w-full">
           {/* Text Content - Mobile: Above image, Desktop: Left side */}
-          <div className="text-white flex flex-col items-center lg:items-start justify-center text-center lg:text-left h-full py-8 lg:py-0 order-1 lg:order-1">
-            {/* Main heading with responsive sizing */}
+          <div className="text-white flex flex-col items-center lg:items-start justify-center text-center lg:text-left h-full py-8 lg:py-0 order-1 lg:order-1 lg:pr-8 lg:max-w-2xl">
+            {/* Main heading with improved alignment and spacing */}
             <Heading 
               level={1} 
-              className="mb-3 md:mb-4 leading-tight text-white text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl px-1 sm:px-2"
+              className="mb-6 md:mb-8 leading-tight text-white px-1 sm:px-2 text-sm xs:text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl"
               aria-live="polite"
               aria-label="Título principal com animação de entrada"
             >
-              <span className="text-white banner-render-fade banner-group-1 block text-center" aria-label="Palavra DESENVOLVIMENTO com efeito de entrada suave">DESENVOLVIMENTO</span>
-              <span className="text-red-500 banner-render-zoom banner-group-2 block text-center" aria-label="Palavra QUE TRADUZ com efeito de zoom">QUE TRADUZ</span>
-              <span className="text-white banner-render-fade banner-group-3 block text-center" aria-label="Palavra SUA MARCA EM com efeito de entrada suave">SUA MARCA EM</span>
-              <span className="text-red-500 banner-render-zoom banner-group-4 block text-center" aria-label="Palavra PERFORMANCE com efeito de zoom">PERFORMANCE,</span>
-              <span className="text-white banner-render-fade banner-group-5 block text-center" aria-label="Palavra ELEGÂNCIA E com efeito de entrada suave">ELEGÂNCIA E</span>
-              <span className="text-red-500 banner-render-zoom banner-group-6 block text-center" aria-label="Palavra RESULTADOS com efeito de zoom">RESULTADOS.</span>
+              <span className="text-white banner-render-fade banner-group-1 block text-center lg:text-left mb-2 lg:mb-3" aria-label="Palavra DESENVOLVIMENTO com efeito de entrada suave">DESENVOLVIMENTO</span>
+              <span className="text-red-500 banner-render-zoom banner-group-2 block text-center lg:text-left mb-2 lg:mb-3" aria-label="Palavra QUE TRADUZ com efeito de zoom">QUE TRADUZ</span>
+              <span className="text-white banner-render-fade banner-group-3 block text-center lg:text-left mb-2 lg:mb-3" aria-label="Palavra SUA MARCA EM com efeito de entrada suave">SUA MARCA EM</span>
+              <span className="text-red-500 banner-render-zoom banner-group-4 block text-center lg:text-left mb-2 lg:mb-3" aria-label="Palavra PERFORMANCE com efeito de zoom">PERFORMANCE,</span>
+              <span className="text-white banner-render-fade banner-group-5 block text-center lg:text-left mb-2 lg:mb-3" aria-label="Palavra ELEGÂNCIA E com efeito de entrada suave">ELEGÂNCIA E</span>
+              <span className="text-red-500 banner-render-zoom banner-group-6 block text-center lg:text-left mb-2 lg:mb-3" aria-label="Palavra RESULTADOS com efeito de zoom">RESULTADOS.</span>
             </Heading>
             
-            {/* Subheading with responsive sizing */}
-            <Text className="mb-4 md:mb-6 leading-relaxed text-white text-xs xs:text-sm md:text-base lg:text-lg px-1 sm:px-0" aria-label="Descrição profissional">
-              Sou uma desenvolvedora web profissional especializada em criar soluções digitais únicas.
+            {/* Subheading with improved spacing - Hidden on mobile, shown on desktop */}
+            <Text className="hidden lg:block mb-8 md:mb-10 leading-relaxed text-white text-xs xs:text-sm md:text-base lg:text-lg xl:text-xl px-1 sm:px-0 lg:pr-4" aria-label="Descrição profissional">
+              Transformo ideias em experiências digitais que convertem visitantes em clientes. Especialista em desenvolvimento web de alta performance com foco em resultados mensuráveis.
             </Text>
             
             {/* CTA Button - Hidden on mobile, shown on desktop */}
-            <div className="hidden lg:flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 items-center w-full sm:w-auto px-1 sm:px-0">
+            <div className="hidden lg:flex flex-col sm:flex-row gap-4 md:gap-6 items-start w-full sm:w-auto px-1 sm:px-0 mt-4">
               <Button 
                 href="#portfolio"
                 variant="primary"
@@ -109,14 +109,10 @@ export default function Banner() {
                 fill
                 className="object-cover object-bottom rounded-lg"
                 priority
-                fetchPriority="high"
-                loading="eager"
-                decoding="sync"
                 sizes="(max-width: 768px) 100vw, 50vw"
-                quality={85}
+                quality={75}
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                style={{ animation: 'none' }}
                 aria-describedby="banner-description"
               />
               {/* Overlay para mobile - Mais escuro para melhor legibilidade */}
@@ -130,7 +126,7 @@ export default function Banner() {
         </div>
         
         {/* Mobile CTA Buttons - Positioned below image and text */}
-        <div className="lg:hidden absolute -bottom-20 left-4 right-4 z-10">
+        <div className="lg:hidden absolute left-4 right-4 z-10" style={{ bottom: '-120px' }}>
           <div className="flex flex-col gap-3 items-center w-full text-center">
             <Button 
               href="#portfolio"

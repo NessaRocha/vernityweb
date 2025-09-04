@@ -5,6 +5,7 @@ export const homepageData = {
       mim: "Mim"
     },
     description: [
+      "Transformo ideias em experiências digitais que convertem visitantes em clientes. Especialista em desenvolvimento web de alta performance com foco em resultados mensuráveis.",
       "Tenho uma trajetória sólida no desenvolvimento web, transformando código em experiências digitais significativas para usuários e clientes. Minha missão vai além de projetos funcionais - busco criar soluções que sejam envolventes desde o primeiro contato e consistentes com os objetivos de negócio.",
       "Especializo-me em tecnologias como React, Node.js, WordPress e Shopify, além de expertise em UX, design responsivo e melhores práticas para performance, acessibilidade e SEO. Foco em criar interfaces intuitivas, sistemas escaláveis e projetos customizados, do código ao comportamento do usuário.",
       "Cada linha de código que escrevo incorpora estratégia, atenção à experiência do usuário e uma abordagem inovadora. Meu foco, do planejamento à entrega, é consistentemente construir experiências digitais completas, otimizadas e orientadas pela identidade."

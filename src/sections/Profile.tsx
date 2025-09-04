@@ -58,7 +58,7 @@ export default function Profile({
               {description.map((paragraph, index) => (
                 <Text 
                   key={index} 
-                  className="text-white leading-relaxed"
+                  className={`text-white leading-relaxed ${index === 0 ? 'lg:hidden' : ''}`}
                 >
                   {paragraph}
                 </Text>

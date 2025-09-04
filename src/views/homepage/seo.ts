@@ -1,7 +1,7 @@
 export const homepageSEO = {
   // Basic SEO
-  title: "** - AI-Powered Landing Pages with ADA Compliance",
-  description: "Create accessible, high-converting landing pages with automatic ADA compliance checking and AI optimization. Get your free accessibility audit today.",
+  title: "Vernity Web",
+  description: "Vernity Web: Empresa de desenvolvimento web no litoral e serra do Rio Grande do Sul. Atendemos Torres, Capão da Canoa, Xangri-lá, Passo de Torres, Criciúma, Araranguá, Arroio do Sal, Gramado, Canela, Bento Gonçalves, Caxias do Sul, Garibaldi, Nova Petrópolis, Nova Prata e toda região litorânea e serrana até Porto Alegre. Especialistas em criar sites profissionais, landing pages e soluções digitais que convertem visitantes em clientes. Contato: (51) 99613-8467",
   keywords: ["ada compliance", "landing page builder", "accessibility checker", "website accessibility", "high-converting pages"],
 
   // OpenGraph for social sharing

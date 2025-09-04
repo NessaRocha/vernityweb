@@ -20,6 +20,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   ...globalSEO,
+  title: {
+    default: "Vernity Web",
+    template: "%s | Vernity Web"
+  },
+  description: "Vernity Web oferece soluções digitais completas: desenvolvimento web profissional, landing pages com ADA compliance automático e otimização de conversão. Transforme sua presença digital hoje.",
+  applicationName: "Vernity Web",
+  authors: [{ name: "Vernity Web", url: "https://**.com" }],
+  creator: "Vernity Web",
+  publisher: "Vernity Web",
   icons: {
     icon: '/assets/icons/favicon.ico',
     shortcut: '/assets/icons/favicon.ico',
