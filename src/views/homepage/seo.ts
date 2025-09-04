@@ -2,21 +2,21 @@ export const homepageSEO = {
   // Basic SEO
   title: "Vernity Web",
   description: "Vernity Web: Empresa de desenvolvimento web no litoral e serra do Rio Grande do Sul. Atendemos Torres, Capão da Canoa, Xangri-lá, Passo de Torres, Criciúma, Araranguá, Arroio do Sal, Gramado, Canela, Bento Gonçalves, Caxias do Sul, Garibaldi, Nova Petrópolis, Nova Prata e toda região litorânea e serrana até Porto Alegre. Especialistas em criar sites profissionais, landing pages e soluções digitais que convertem visitantes em clientes. Contato: (51) 99613-8467",
-  keywords: ["ada compliance", "landing page builder", "accessibility checker", "website accessibility", "high-converting pages"],
+  keywords: ["desenvolvimento web", "sites profissionais", "landing pages", "soluções digitais", "litoral RS", "serra gaúcha", "Torres", "Gramado", "Caxias do Sul", "Porto Alegre"],
 
   // OpenGraph for social sharing
   openGraph: {
-    title: "** - AI-Powered Landing Pages with ADA Compliance",
-    description: "Create accessible, high-converting landing pages with automatic ADA compliance checking and AI optimization. Get your free accessibility audit today.",
+    title: "Vernity Web - Desenvolvimento Web Profissional",
+    description: "Vernity Web: Empresa de desenvolvimento web no litoral e serra do Rio Grande do Sul. Especialistas em criar sites profissionais, landing pages e soluções digitais que convertem visitantes em clientes.",
     type: "website",
-    url: "https://**.com",
+    url: "https://vernityweb.com.br",
   },
 
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "** - AI-Powered Landing Pages with ADA Compliance",
-    description: "Create accessible, high-converting landing pages with automatic ADA compliance checking and AI optimization. Get your free accessibility audit today.",
+    title: "Vernity Web - Desenvolvimento Web Profissional",
+    description: "Vernity Web: Empresa de desenvolvimento web no litoral e serra do Rio Grande do Sul. Especialistas em criar sites profissionais, landing pages e soluções digitais que convertem visitantes em clientes.",
   },
 
   // Structured Data for AI Chat Discovery
