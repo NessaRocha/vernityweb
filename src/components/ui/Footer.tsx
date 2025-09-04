@@ -81,7 +81,9 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="#"
+                  href="https://www.linkedin.com/in/devvanessarocha/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white hover:scale-105 hover:translate-x-1 active:text-white active:scale-105 active:translate-x-1 focus:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-red-950 transition-all duration-300 text-left group relative flex items-center space-x-3"
                   aria-label="Abrir perfil no LinkedIn"
                 >
@@ -94,7 +96,9 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="#"
+                  href="https://github.com/NessaRocha"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white hover:scale-105 hover:translate-x-1 focus:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-red-950 transition-all duration-300 text-left group relative flex items-center space-x-3"
                   aria-label="Abrir perfil no GitHub"
                 >
@@ -122,7 +126,9 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="#"
+                  href="https://www.instagram.com/vernityweb/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white hover:scale-105 hover:translate-x-1 focus:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-red-950 transition-all duration-300 text-left group relative flex items-center space-x-3"
                   aria-label="Abrir perfil no Instagram"
                 >
