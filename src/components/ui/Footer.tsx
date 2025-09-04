@@ -36,7 +36,6 @@ export default function Footer() {
                 <a 
                   href="#hero"
                   className="text-gray-300 hover:text-white hover:scale-105 hover:translate-x-1 focus:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-red-950 transition-all duration-300 text-left group relative block"
-                  role="menuitem"
                   aria-label="Ir para seção Início"
                 >
                   <span className="relative z-10">Início</span>
@@ -47,7 +46,6 @@ export default function Footer() {
                 <a 
                   href="#about"
                   className="text-gray-300 hover:text-white hover:scale-105 hover:translate-x-1 active:text-white active:scale-105 active:translate-x-1 focus:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-red-950 transition-all duration-300 text-left group relative block"
-                  role="menuitem"
                   aria-label="Ir para seção Sobre"
                 >
                   <span className="relative z-10">Sobre</span>
@@ -58,7 +56,6 @@ export default function Footer() {
                 <a 
                   href="#services"
                   className="text-gray-300 hover:text-white hover:scale-105 hover:translate-x-1 active:text-white active:scale-105 active:translate-x-1 focus:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-red-950 transition-all duration-300 text-left group relative block"
-                  role="menuitem"
                   aria-label="Ir para seção Serviços"
                 >
                   <span className="relative z-10">Serviços</span>
@@ -69,7 +66,6 @@ export default function Footer() {
                 <a 
                   href="#portfolio"
                   className="text-gray-300 hover:text-white hover:scale-105 hover:translate-x-1 active:text-white active:scale-105 active:translate-x-1 focus:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-red-950 transition-all duration-300 text-left group relative block"
-                  role="menuitem"
                   aria-label="Ir para seção Portfólio"
                 >
                   <span className="relative z-10">Portfólio</span>
@@ -87,7 +83,6 @@ export default function Footer() {
                 <a 
                   href="#"
                   className="text-gray-300 hover:text-white hover:scale-105 hover:translate-x-1 active:text-white active:scale-105 active:translate-x-1 focus:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-red-950 transition-all duration-300 text-left group relative flex items-center space-x-3"
-                  role="button"
                   aria-label="Abrir perfil no LinkedIn"
                 >
                   <svg className="w-5 h-5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -101,7 +96,6 @@ export default function Footer() {
                 <a 
                   href="#"
                   className="text-gray-300 hover:text-white hover:scale-105 hover:translate-x-1 focus:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-red-950 transition-all duration-300 text-left group relative flex items-center space-x-3"
-                  role="button"
                   aria-label="Abrir perfil no GitHub"
                 >
                   <svg className="w-5 h-5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -117,7 +111,6 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white hover:scale-105 hover:translate-x-1 focus:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-red-950 transition-all duration-300 text-left group relative flex items-center space-x-3"
-                  role="button"
                   aria-label="Abrir conversa no WhatsApp"
                 >
                   <svg className="w-5 h-5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -131,7 +124,6 @@ export default function Footer() {
                 <a 
                   href="#"
                   className="text-gray-300 hover:text-white hover:scale-105 hover:translate-x-1 focus:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-red-950 transition-all duration-300 text-left group relative flex items-center space-x-3"
-                  role="button"
                   aria-label="Abrir perfil no Instagram"
                 >
                   <svg className="w-5 h-5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

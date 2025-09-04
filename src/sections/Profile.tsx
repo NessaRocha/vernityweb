@@ -46,14 +46,6 @@ export default function Profile({
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
           <div className="text-white" aria-label="Seção de descrição pessoal">
-            <Heading 
-              level={3} 
-              className="mb-8 leading-tight text-white"
-            >
-              <span className="text-white">{title.sobre}</span>{" "}
-              <span className="text-red-500">{title.mim}</span>
-            </Heading>
-            
             <div id="profile-description" className="space-y-6">
               {description.map((paragraph, index) => (
                 <Text 
