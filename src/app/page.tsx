@@ -4,7 +4,7 @@ import Profile from "@/sections/Profile";
 import Services from "@/sections/Services";
 import Projects from "@/sections/Projects";
 import Connect from "@/sections/Connect";
-import Footer from "@/components/Footer";
+import Footer from "@/components/ui/Footer";
 import { homepageData } from "@/views/homepage/data";
 import { homepageSEO } from "@/views/homepage/seo";
 import Script from "next/script";
