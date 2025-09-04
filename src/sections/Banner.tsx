@@ -57,12 +57,12 @@ export default function Banner() {
               aria-live="polite"
               aria-label="Título principal com animação de entrada"
             >
-              <span className="text-white banner-render-fade banner-group-1 block text-center lg:text-left mb-2 lg:mb-3">DESENVOLVIMENTO</span>
-              <span className="text-red-500 banner-render-zoom banner-group-2 block text-center lg:text-left mb-2 lg:mb-3">QUE TRADUZ</span>
-              <span className="text-white banner-render-fade banner-group-3 block text-center lg:text-left mb-2 lg:mb-3">SUA MARCA EM</span>
-              <span className="text-red-500 banner-render-zoom banner-group-4 block text-center lg:text-left mb-2 lg:mb-3">PERFORMANCE,</span>
-              <span className="text-white banner-render-fade banner-group-5 block text-center lg:text-left mb-2 lg:mb-3">ELEGÂNCIA E</span>
-              <span className="text-red-500 banner-render-zoom banner-group-6 block text-center lg:text-left mb-2 lg:mb-3">RESULTADOS.</span>
+              <span className="text-white banner-render-fade banner-group-1 block text-center lg:text-left mb-2 lg:mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">DESENVOLVIMENTO</span>
+              <span className="text-red-500 banner-render-zoom banner-group-2 block text-center lg:text-left mb-2 lg:mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">QUE TRADUZ</span>
+              <span className="text-white banner-render-fade banner-group-3 block text-center lg:text-left mb-2 lg:mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">SUA MARCA EM</span>
+              <span className="text-red-500 banner-render-zoom banner-group-4 block text-center lg:text-left mb-2 lg:mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">PERFORMANCE,</span>
+              <span className="text-white banner-render-fade banner-group-5 block text-center lg:text-left mb-2 lg:mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">ELEGÂNCIA E</span>
+              <span className="text-red-500 banner-render-zoom banner-group-6 block text-center lg:text-left mb-2 lg:mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">RESULTADOS.</span>
             </Heading>
             
             {/* Subheading with improved spacing - Hidden on mobile, shown on desktop */}
@@ -76,7 +76,7 @@ export default function Banner() {
                 href="#portfolio"
                 variant="primary"
                 size="md"
-                className="w-full sm:w-auto bg-red-700 text-white hover:bg-red-800 focus:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2 focus:ring-offset-black text-sm sm:text-base"
+                className="w-full sm:w-auto bg-red-700 text-white hover:bg-red-800 focus:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2 focus:ring-offset-black text-sm sm:text-base drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
               aria-label="Ver meu portfólio de projetos desenvolvidos"
               >
                 Ver Portfólio
@@ -85,7 +85,7 @@ export default function Banner() {
                 href="#contact"
                 variant="outline"
                 size="md"
-                className="w-full sm:w-auto border-2 border-white text-white hover:bg-[#180909] hover:border-[#180909] hover:text-white focus:bg-[#180909] focus:border-[#180909] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#180909] focus:ring-offset-2 focus:ring-offset-black text-sm sm:text-base text-center transition-all duration-500 ease-out transform hover:scale-105 hover:shadow-2xl hover:shadow-[#180909]/50 group relative overflow-hidden"
+                className="w-full sm:w-auto border-2 border-white text-white hover:bg-[#180909] hover:border-[#180909] hover:text-white focus:bg-[#180909] focus:border-[#180909] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#180909] focus:ring-offset-2 focus:ring-offset-black text-sm sm:text-base text-center transition-all duration-500 ease-out transform hover:scale-105 hover:shadow-2xl hover:shadow-[#180909]/50 group relative overflow-hidden drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
               aria-label="Entrar em contato para iniciar um projeto"
               >
                 <span className="relative z-10 group-hover:text-white transition-colors duration-500">
@@ -132,7 +132,7 @@ export default function Banner() {
               href="#portfolio"
               variant="primary"
               size="md"
-              className="w-full bg-red-700 text-white hover:bg-red-800 focus:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2 focus:ring-offset-black text-sm sm:text-base text-center"
+              className="w-full bg-red-700 text-white hover:bg-red-800 focus:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2 focus:ring-offset-black text-sm sm:text-base text-center drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
               aria-label="Ver meu portfólio de projetos desenvolvidos"
             >
               Ver Portfólio
@@ -141,7 +141,7 @@ export default function Banner() {
               href="#contact"
               variant="outline"
               size="md"
-              className="w-full bg-[#180909] border-2 border-[#180909] text-white hover:bg-[#180909] hover:border-[#180909] hover:text-white focus:bg-[#180909] focus:border-[#180909] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#180909] focus:ring-offset-2 focus:ring-offset-black text-sm sm:text-base text-center transition-all duration-500 ease-out transform hover:scale-105 hover:shadow-2xl hover:shadow-[#180909]/50 group relative overflow-hidden"
+              className="w-full bg-[#180909] border-2 border-[#180909] text-white hover:bg-[#180909] hover:border-[#180909] hover:text-white focus:bg-[#180909] focus:border-[#180909] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#180909] focus:ring-offset-2 focus:ring-offset-black text-sm sm:text-base text-center transition-all duration-500 ease-out transform hover:scale-105 hover:shadow-2xl hover:shadow-[#180909]/50 group relative overflow-hidden drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
               aria-label="Entrar em contato para iniciar um projeto"
             >
               <span className="relative z-10 group-hover:text-white transition-colors duration-500">
