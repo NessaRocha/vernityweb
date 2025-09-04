@@ -57,12 +57,12 @@ export default function Banner() {
               aria-live="polite"
               aria-label="Título principal com animação de entrada"
             >
-              <span className="text-white banner-render-fade banner-group-1 block text-center lg:text-left mb-2 lg:mb-3" aria-label="Palavra DESENVOLVIMENTO com efeito de entrada suave">DESENVOLVIMENTO</span>
-              <span className="text-red-500 banner-render-zoom banner-group-2 block text-center lg:text-left mb-2 lg:mb-3" aria-label="Palavra QUE TRADUZ com efeito de zoom">QUE TRADUZ</span>
-              <span className="text-white banner-render-fade banner-group-3 block text-center lg:text-left mb-2 lg:mb-3" aria-label="Palavra SUA MARCA EM com efeito de entrada suave">SUA MARCA EM</span>
-              <span className="text-red-500 banner-render-zoom banner-group-4 block text-center lg:text-left mb-2 lg:mb-3" aria-label="Palavra PERFORMANCE com efeito de zoom">PERFORMANCE,</span>
-              <span className="text-white banner-render-fade banner-group-5 block text-center lg:text-left mb-2 lg:mb-3" aria-label="Palavra ELEGÂNCIA E com efeito de entrada suave">ELEGÂNCIA E</span>
-              <span className="text-red-500 banner-render-zoom banner-group-6 block text-center lg:text-left mb-2 lg:mb-3" aria-label="Palavra RESULTADOS com efeito de zoom">RESULTADOS.</span>
+              <span className="text-white banner-render-fade banner-group-1 block text-center lg:text-left mb-2 lg:mb-3">DESENVOLVIMENTO</span>
+              <span className="text-red-500 banner-render-zoom banner-group-2 block text-center lg:text-left mb-2 lg:mb-3">QUE TRADUZ</span>
+              <span className="text-white banner-render-fade banner-group-3 block text-center lg:text-left mb-2 lg:mb-3">SUA MARCA EM</span>
+              <span className="text-red-500 banner-render-zoom banner-group-4 block text-center lg:text-left mb-2 lg:mb-3">PERFORMANCE,</span>
+              <span className="text-white banner-render-fade banner-group-5 block text-center lg:text-left mb-2 lg:mb-3">ELEGÂNCIA E</span>
+              <span className="text-red-500 banner-render-zoom banner-group-6 block text-center lg:text-left mb-2 lg:mb-3">RESULTADOS.</span>
             </Heading>
             
             {/* Subheading with improved spacing - Hidden on mobile, shown on desktop */}
@@ -77,7 +77,7 @@ export default function Banner() {
                 variant="primary"
                 size="md"
                 className="w-full sm:w-auto bg-red-700 text-white hover:bg-red-800 focus:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2 focus:ring-offset-black text-sm sm:text-base"
-                aria-label="Ver meu portfólio de projetos desenvolvidos"
+              aria-label="Ver meu portfólio de projetos desenvolvidos"
               >
                 Ver Portfólio
               </Button>
@@ -86,7 +86,7 @@ export default function Banner() {
                 variant="outline"
                 size="md"
                 className="w-full sm:w-auto border-2 border-white text-white hover:bg-[#180909] hover:border-[#180909] hover:text-white focus:bg-[#180909] focus:border-[#180909] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#180909] focus:ring-offset-2 focus:ring-offset-black text-sm sm:text-base text-center transition-all duration-500 ease-out transform hover:scale-105 hover:shadow-2xl hover:shadow-[#180909]/50 group relative overflow-hidden"
-                aria-label="Entrar em contato para iniciar um projeto"
+              aria-label="Entrar em contato para iniciar um projeto"
               >
                 <span className="relative z-10 group-hover:text-white transition-colors duration-500">
                   Fale Comigo
