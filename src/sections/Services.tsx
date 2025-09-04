@@ -43,7 +43,6 @@ export default function Services({
     return (
       <section 
         ref={sectionRef}
-        id="services" 
         className="py-24" 
         style={{ backgroundColor: '#180909' }}
       >
@@ -69,7 +68,6 @@ export default function Services({
   return (
           <section 
         ref={sectionRef}
-        id="services" 
         className="py-24" 
         style={{ backgroundColor: '#180909' }}
       >

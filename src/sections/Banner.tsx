@@ -22,12 +22,12 @@ export default function Banner() {
            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
          />
         
-        {/* Overlay sombreado para mesclar com o fundo */}
-        <div className="absolute inset-0 bg-gradient-to-l from-[#200909] via-transparent to-transparent opacity-80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f0f] via-transparent to-transparent opacity-60" />
+        {/* Overlay sombreado para mesclar com o fundo - EQUILIBRADO */}
+        <div className="absolute inset-0 bg-gradient-to-l from-[#200909] via-black/40 to-transparent opacity-75" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f0f] via-black/20 to-transparent opacity-60" />
         
-        {/* Overlay escuro adicional para mobile */}
-        <div className="absolute inset-0 bg-black/40 lg:hidden" />
+        {/* Overlay escuro adicional para mobile - EQUILIBRADO */}
+        <div className="absolute inset-0 bg-black/50 lg:hidden" />
       </div>
       
       {/* Harmonizing Transparent Element - Behind Text, Over Image */}
@@ -36,7 +36,7 @@ export default function Banner() {
         aria-hidden="true"
       >
         <div 
-          className="w-full h-full bg-gradient-to-r from-[#200909] via-black/20 to-transparent"
+          className="w-full h-full bg-gradient-to-r from-[#200909] via-black/30 to-transparent"
           aria-hidden="true"
         />
         <div 
@@ -53,7 +53,7 @@ export default function Banner() {
             {/* Main heading with improved alignment and spacing */}
             <Heading 
               level={1} 
-              className="mb-6 md:mb-8 leading-tight text-white px-1 sm:px-2 text-sm xs:text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl"
+              className="mb-6 md:mb-8 leading-tight text-white px-1 sm:px-2 text-sm xs:text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
               aria-live="polite"
               aria-label="Título principal com animação de entrada"
             >
@@ -66,7 +66,7 @@ export default function Banner() {
             </Heading>
             
             {/* Subheading with improved spacing - Hidden on mobile, shown on desktop */}
-            <Text className="hidden lg:block mb-8 md:mb-10 leading-relaxed text-white text-xs xs:text-sm md:text-base lg:text-lg xl:text-xl px-1 sm:px-0 lg:pr-4" aria-label="Descrição profissional">
+            <Text className="hidden lg:block mb-8 md:mb-10 leading-relaxed text-white text-xs xs:text-sm md:text-base lg:text-lg xl:text-xl px-1 sm:px-0 lg:pr-4 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]" aria-label="Descrição profissional">
               Transformo ideias em experiências digitais que convertem visitantes em clientes. Especialista em desenvolvimento web de alta performance com foco em resultados mensuráveis.
             </Text>
             
@@ -115,7 +115,7 @@ export default function Banner() {
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 aria-describedby="banner-description"
               />
-              {/* Overlay para mobile - Mais escuro para melhor legibilidade */}
+              {/* Overlay para mobile - EQUILIBRADO para melhor legibilidade */}
               <div className="absolute inset-0 bg-black/60 rounded-lg" />
             </div>
             {/* Hidden description for screen readers */}

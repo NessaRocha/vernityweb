@@ -22,7 +22,7 @@ export default function ContactButtons() {
       <button 
         onClick={handleWhatsAppClick}
         className="w-full max-w-sm h-14 flex items-center justify-center space-x-3 bg-red-700 text-white hover:bg-red-800 hover:scale-105 hover:shadow-2xl hover:shadow-red-700/30 focus:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2 focus:ring-offset-black transition-all duration-300 group relative overflow-hidden rounded-lg"
-        aria-label="Abrir WhatsApp para conversar sobre projeto web"
+        aria-label="Falar no WhatsApp"
       >
         {/* Efeito de Glow no Hover */}
         <div className="absolute inset-0 bg-gradient-to-r from-red-400/0 via-red-400/20 to-red-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -37,7 +37,7 @@ export default function ContactButtons() {
       <button 
         onClick={handleEmailClick}
         className="w-full max-w-sm h-14 flex items-center justify-center space-x-3 bg-white text-black border-white hover:bg-gray-50 hover:scale-105 hover:shadow-2xl hover:shadow-white/30 focus:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black transition-all duration-300 group relative overflow-hidden rounded-lg"
-        aria-label="Enviar email para nessasim@hotmail.com"
+        aria-label="Enviar Email"
       >
         {/* Efeito de Glow no Hover */}
         <div className="absolute inset-0 bg-gradient-to-r from-gray-100/0 via-gray-100/30 to-gray-100/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

@@ -52,7 +52,7 @@ export default function Navigation() {
               onClick={toggleMobileMenu}
               aria-label="Toggle mobile menu"
               aria-expanded={isMobileMenuOpen}
-              aria-controls="mobile-menu"
+              aria-controls={isMobileMenuOpen ? "mobile-menu" : undefined}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 {isMobileMenuOpen ? (

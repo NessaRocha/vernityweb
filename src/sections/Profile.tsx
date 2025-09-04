@@ -25,7 +25,6 @@ export default function Profile({
 }: ProfileProps) {
   return (
     <section 
-      id="about" 
       className="py-24 bg-gray-950"
       aria-labelledby="profile-heading"
       aria-describedby="profile-description"
@@ -38,14 +37,14 @@ export default function Profile({
               level={2} 
               className="text-white mb-4"
             >
-              <span className="text-white drop-shadow-[0_2px_4px_rgba(255,255,255,0.1)]" aria-label="Palavra Sobre">{title.sobre}</span>{" "}
-              <span className="text-red-500 drop-shadow-[0_2px_4px_rgba(239,68,68,0.3)]" aria-label="Palavra Mim">{title.mim}</span>
+              <span className="text-white drop-shadow-[0_2px_4px_rgba(255,255,255,0.1)]">{title.sobre}</span>{" "}
+              <span className="text-red-500 drop-shadow-[0_2px_4px_rgba(239,68,68,0.3)]">{title.mim}</span>
             </Heading>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
-          <div className="text-white" aria-label="Seção de descrição pessoal">
+          <div className="text-white">
             <div id="profile-description" className="space-y-6">
               {description.map((paragraph, index) => (
                 <Text 
@@ -58,7 +57,7 @@ export default function Profile({
             </div>
           </div>
           
-          <div className="text-white" aria-label="Seção de habilidades técnicas">
+          <div className="text-white">
             <Heading 
               level={3} 
               className="mb-8 leading-tight text-white"
