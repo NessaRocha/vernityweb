@@ -37,6 +37,11 @@ export default function Connect() {
         subject: '',
         message: ''
       });
+      
+      // Esconder mensagem de sucesso após 4 segundos
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 4000);
     }, 1000);
   };
 
@@ -282,14 +287,7 @@ export default function Connect() {
                     </svg>
                     <span className="font-semibold">Mensagem Enviada!</span>
                   </div>
-                  <p className="text-sm mb-3">Obrigado pelo seu contato. Retornaremos em breve!</p>
-                  <button
-                    type="button"
-                    onClick={() => setIsSubmitted(false)}
-                    className="text-sm bg-green-700 hover:bg-green-800 px-4 py-2 rounded transition-colors duration-200"
-                  >
-                    Enviar Outra Mensagem
-                  </button>
+                  <p className="text-sm">Obrigado pelo seu contato. Retornaremos em breve!</p>
                 </div>
               )}
 

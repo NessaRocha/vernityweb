@@ -172,6 +172,8 @@ const nextConfig: NextConfig = {
 - ✅ Formulário ajustado para submit nativo (removido preventDefault e onSubmit)
 - ✅ UX melhorada: mensagem de sucesso inline (sem redirecionamento)
 - ✅ Estados de loading e sucesso implementados
+- ✅ Mensagem de sucesso com auto-dismiss (4 segundos)
+- ✅ Botão "Enviar Outra Mensagem" removido
 
 ### **Próximas Atualizações:**
 - [ ] Log do processo de deploy
