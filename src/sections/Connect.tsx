@@ -273,13 +273,34 @@ export default function Connect() {
                 />
               </div>
 
+              {/* Mensagem de Sucesso */}
+              {isSubmitted && (
+                <div className="bg-green-600 text-white p-4 rounded-lg text-center">
+                  <div className="flex items-center justify-center mb-2">
+                    <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-semibold">Mensagem Enviada!</span>
+                  </div>
+                  <p className="text-sm mb-3">Obrigado pelo seu contato. Retornaremos em breve!</p>
+                  <button
+                    type="button"
+                    onClick={() => setIsSubmitted(false)}
+                    className="text-sm bg-green-700 hover:bg-green-800 px-4 py-2 rounded transition-colors duration-200"
+                  >
+                    Enviar Outra Mensagem
+                  </button>
+                </div>
+              )}
+
               {/* Botão Enviar */}
               <button
                 type="submit"
-                className="w-full bg-red-600 hover:bg-red-700 focus:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-colors duration-200"
+                disabled={isSubmitting}
+                className="w-full bg-red-600 hover:bg-red-700 focus:bg-red-700 disabled:bg-gray-500 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-colors duration-200"
                 aria-describedby="form-description"
               >
-                Enviar Mensagem
+                {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
               </button>
             </form>
           </div>
