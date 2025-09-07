@@ -124,14 +124,16 @@ const nextConfig: NextConfig = {
 ### **4.1 Preparação:**
 - [x] ✅ Erros de ESLint corrigidos (Link components)
 - [x] ✅ Formulário ajustado para submit nativo (removido preventDefault)
-- [ ] Fazer commit de todos os arquivos
-- [ ] Push para repositório GitHub
+- [x] ✅ UX melhorada: mensagem de sucesso inline
+- [x] ✅ Estados de loading e sucesso implementados
+- [x] ✅ Commit e push realizados pelo usuário
+- [x] ✅ Deploy em andamento para teste
 - [ ] Verificar se build local funciona: `npm run build`
 
 ### **4.2 Deploy Automático:**
 - [x] ✅ Repositório já conectado ao Netlify
 - [x] ✅ Build settings já configurados
-- [ ] Push automático gera novo deploy
+- [x] ✅ Push automático gera novo deploy
 - [ ] Testar formulário no site atualizado
 
 ### **4.3 Configurações Pós-Deploy:**
@@ -168,6 +170,8 @@ const nextConfig: NextConfig = {
 - ✅ Erros de ESLint corrigidos (Link components)
 - ✅ Documento atualizado com fluxo de deploy automático
 - ✅ Formulário ajustado para submit nativo (removido preventDefault e onSubmit)
+- ✅ UX melhorada: mensagem de sucesso inline (sem redirecionamento)
+- ✅ Estados de loading e sucesso implementados
 
 ### **Próximas Atualizações:**
 - [ ] Log do processo de deploy

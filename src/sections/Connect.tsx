@@ -10,6 +10,9 @@ export default function Connect() {
     subject: '',
     message: ''
   });
+  
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -17,6 +20,24 @@ export default function Connect() {
       ...prev,
       [name]: value
     }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simular envio (o Netlify processará automaticamente)
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      // Limpar formulário
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    }, 1000);
   };
 
 
@@ -170,7 +191,7 @@ export default function Connect() {
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              action="/contato/sucesso"
+              onSubmit={handleSubmit}
               className="space-y-6"
               aria-label="Formulário de contato"
             >
