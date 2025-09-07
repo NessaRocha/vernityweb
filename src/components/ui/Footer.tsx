@@ -5,7 +5,7 @@ import Container from "@/components/ui/Container";
 
 export default function Footer() {
   return (
-    <footer className="text-white py-16" style={{ backgroundColor: '#180909' }}>
+    <footer className="text-white py-16 bg-[#180909]">
       <Container>
         {/* Três Colunas Principais */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">

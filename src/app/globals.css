@@ -80,17 +80,17 @@ img,
 [data-nimg-intrinsic],
 [data-nimg-fill],
 [data-nimg-sizes] {
-  opacity: 1 !important;
-  animation: none !important;
-  will-change: auto !important;
+  opacity: 1;
+  animation: none;
+  will-change: auto;
 }
 
 /* Prevenir flicker no favicon - SEM bloquear transições */
 link[rel="icon"],
 link[rel="shortcut icon"],
 link[rel="apple-touch-icon"] {
-  opacity: 1 !important;
-  animation: none !important;
+  opacity: 1;
+  animation: none;
 }
 
 /* Animações para o portfólio - OTIMIZADAS para composição */

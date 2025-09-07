@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
@@ -49,22 +48,25 @@ export default function Banner() {
       <Container className="relative z-10 h-full flex items-center px-4 md:px-8 lg:px-16">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-16 lg:gap-20 items-center w-full">
           {/* Text Content - Mobile: Above image, Desktop: Left side */}
-          <div className="text-white flex flex-col items-center lg:items-start justify-center text-center lg:text-left h-full py-8 lg:py-0 order-1 lg:order-1 lg:pr-8 lg:max-w-2xl">
+          <div className="text-white flex flex-col items-center lg:items-start justify-center 
+                         text-center lg:text-left h-full py-16 lg:py-12 order-1 lg:order-1 
+                         lg:pr-8 lg:max-w-2xl">
             {/* Main heading with improved alignment and spacing */}
             <div className="relative">
-              <Heading 
-                level={1} 
-                className="relative z-10 mb-6 md:mb-8 leading-tight text-white px-1 sm:px-2 text-sm xs:text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+              <h1 
+                className="relative z-10 mb-6 md:mb-8 leading-tight text-white px-1 sm:px-2 
+                           font-bold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 
+                           drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
                 aria-live="polite"
                 aria-label="Título principal com animação de entrada"
               >
-              <span className="text-white banner-render-fade banner-group-1 block text-center lg:text-left mb-2 lg:mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">DESENVOLVIMENTO</span>
-              <span className="text-red-500 banner-render-zoom banner-group-2 block text-center lg:text-left mb-2 lg:mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">QUE TRADUZ</span>
-              <span className="text-white banner-render-fade banner-group-3 block text-center lg:text-left mb-2 lg:mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">SUA MARCA EM</span>
-              <span className="text-red-500 banner-render-zoom banner-group-4 block text-center lg:text-left mb-2 lg:mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">PERFORMANCE,</span>
-              <span className="text-white banner-render-fade banner-group-5 block text-center lg:text-left mb-2 lg:mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">ELEGÂNCIA E</span>
-              <span className="text-red-500 banner-render-zoom banner-group-6 block text-center lg:text-left mb-2 lg:mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">RESULTADOS.</span>
-              </Heading>
+              <span className="text-white banner-render-fade banner-group-1 block text-center lg:text-left mb-1 lg:mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">DESENVOLVIMENTO</span>
+              <span className="text-red-500 banner-render-zoom banner-group-2 block text-center lg:text-left mb-1 lg:mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">QUE TRADUZ</span>
+              <span className="text-white banner-render-fade banner-group-3 block text-center lg:text-left mb-1 lg:mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">SUA MARCA EM</span>
+              <span className="text-red-500 banner-render-zoom banner-group-4 block text-center lg:text-left mb-1 lg:mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">PERFORMANCE,</span>
+              <span className="text-white banner-render-fade banner-group-5 block text-center lg:text-left mb-1 lg:mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">ELEGÂNCIA E</span>
+              <span className="text-red-500 banner-render-zoom banner-group-6 block text-center lg:text-left mb-1 lg:mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">RESULTADOS.</span>
+              </h1>
             </div>
             
             {/* Subheading with improved spacing - Hidden on mobile, shown on desktop */}
@@ -130,7 +132,7 @@ export default function Banner() {
         </div>
         
         {/* Mobile CTA Buttons - Positioned below image and text */}
-        <div className="lg:hidden absolute left-4 right-4 z-10" style={{ bottom: '-120px' }}>
+        <div className="lg:hidden absolute left-4 right-4 z-10 -bottom-30">
           <div className="flex flex-col gap-3 items-center w-full text-center relative">
             {/* Overlay específico para os botões mobile */}
             <div className="absolute inset-0 bg-black/20 rounded-lg -m-2" aria-hidden="true"></div>

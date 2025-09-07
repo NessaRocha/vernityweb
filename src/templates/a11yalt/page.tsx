@@ -8,7 +8,7 @@ const A11yAltTemplate = () => {
     // Import and initialize calculator when component mounts
     if (typeof window !== 'undefined') {
       import('./external-script').then(module => {
-        console.log('Initializing calculator from component...');
+        // Inicializando calculadora
         module.initializeCalculator();
       });
     }

@@ -1,0 +1,53 @@
+# Headers globais para todas as páginas
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Headers para assets estáticos (cache longo)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Headers para imagens
+*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+# Headers para CSS
+*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# Headers para JavaScript
+*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# Headers para fontes
+*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+
+# Headers para HTML (cache curto)
+*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Headers para página de sucesso do formulário
+/contato/sucesso
+  Cache-Control: public, max-age=0, must-revalidate

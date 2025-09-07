@@ -1,0 +1,13 @@
+# Redirecionamentos para SPA (Single Page Application)
+# Todas as rotas que não existem como arquivos estáticos
+# devem ser redirecionadas para index.html
+
+# Redirecionamento principal para SPA
+/*    /index.html   200
+
+# Redirecionamentos específicos (se necessário)
+# /old-page    /new-page    301
+# /blog/*      /blog/       200
+
+# Redirecionamento para página de erro 404 personalizada
+# /404    /404.html    404

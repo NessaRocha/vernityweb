@@ -43,8 +43,7 @@ export default function Services({
     return (
       <section 
         ref={sectionRef}
-        className="py-24" 
-        style={{ backgroundColor: '#180909' }}
+        className="py-24 bg-[#180909]"
       >
         <Container>
           <div className="text-center mb-16">
@@ -68,8 +67,7 @@ export default function Services({
   return (
           <section 
         ref={sectionRef}
-        className="py-24" 
-        style={{ backgroundColor: '#180909' }}
+        className="py-24 bg-[#180909]"
       >
       <Container>
         <div className="text-center mb-16">

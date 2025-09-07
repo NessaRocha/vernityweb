@@ -1,13 +1,13 @@
-import Heading from "@/components/ui/Heading";
-import Text from "@/components/ui/Text";
-import Container from "@/components/ui/Container";
-import ContactButtons from "@/components/ui/ContactButtons";
-import { useState } from "react";
+'use client';
+
+import React, { useState } from 'react';
+import { Container } from '@/components/ui';
 
 export default function Connect() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    subject: '',
     message: ''
   });
 
@@ -22,68 +22,128 @@ export default function Connect() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Aqui você pode adicionar a lógica para enviar o formulário
-    console.log('Formulário enviado:', formData);
+    // Formulário enviado com sucesso
   };
 
   return (
-    <section className="py-24 bg-black">
-      <Container>
+    <>
+      {/* Structured Data para SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Entre em Contato",
+            "description": "Transforme sua visão em realidade digital. Desenvolva soluções web únicas que elevam sua marca e geram resultados.",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Vernity Web",
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+55-51-99613-8467",
+                  "contactType": "customer service",
+                  "email": "nessasim@hotmail.com",
+                  "areaServed": "BR",
+                  "availableLanguage": "Portuguese"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Torres",
+                "addressCountry": "BR"
+              }
+            }
+          })
+        }}
+      />
+      
+      <section 
+        className="py-24 bg-black" 
+        id="contato"
+        aria-labelledby="contact-heading"
+      >
+        <Container>
         {/* Título Centralizado */}
         <div className="text-center mb-16">
-          <Heading 
-            level={1} 
-            className="text-4xl md:text-5xl font-bold mb-6 text-white"
+          <h1 
+            id="contact-heading"
+            className="text-4xl md:text-5xl font-bold mb-4 text-white"
           >
-            Vamos criar algo incrível juntas!
-          </Heading>
+            <span className="text-white">Entre em</span>{" "}
+            <span className="text-red-500">Contato</span>
+          </h1>
+          <h2 className="text-xl md:text-2xl text-gray-200 font-medium">
+            Vamos criar algo incrível juntos!
+          </h2>
         </div>
 
+        {/* Layout de 2 Colunas */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div className="text-white">
-            {/* Descrição */}
-            <Text className="mb-8 text-white leading-relaxed text-lg">
-              Transforme sua visão em realidade digital. Desenvolva soluções web únicas que elevam sua marca e geram resultados.
-            </Text>
-            
-            {/* Informações de Contato */}
-            <div className="space-y-6 mb-8">
-              {/* Email */}
-              <div className="flex items-center space-x-4">
-                <div className="w-6 h-6 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                  </svg>
-                </div>
-                <Text className="text-white">nessasim@hotmail.com</Text>
-              </div>
-              
-              {/* Telefone */}
-              <div className="flex items-center space-x-4">
-                <div className="w-6 h-6 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                </div>
-                <Text className="text-white">+55 (61) 89813-8467</Text>
-              </div>
-
-              {/* Localização */}
-              <div className="flex items-center space-x-4">
-                <div className="w-6 h-6 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <Text className="text-white">Torres, Brasil</Text>
-              </div>
+          
+          {/* Coluna Esquerda - Informações de Contato */}
+          <div className="flex flex-col justify-between h-full">
+            <div className="space-y-8">
+              {/* Descrição */}
+              <p className="text-lg text-gray-200 leading-relaxed">
+                Transforme sua visão em realidade digital. Desenvolva soluções web únicas que elevam sua marca e geram resultados.
+              </p>
             </div>
 
-            {/* Botões de CTA */}
-            <div className="space-y-4">
+            {/* Informações de Contato - Centralizadas verticalmente */}
+            <div className="flex-1 flex items-center justify-center">
+              <address className="space-y-6 not-italic text-center">
+                {/* Email */}
+                <div className="flex items-center justify-center space-x-4">
+                  <div className="w-6 h-6 flex items-center justify-center" aria-hidden="true">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                  </div>
+                  <a 
+                    href="mailto:nessasim@hotmail.com" 
+                    className="text-white hover:text-red-400 transition-colors duration-200"
+                    aria-label="Enviar email para nessasim@hotmail.com"
+                  >
+                    nessasim@hotmail.com
+                  </a>
+                </div>
+
+                {/* Telefone */}
+                <div className="flex items-center justify-center space-x-4">
+                  <div className="w-6 h-6 flex items-center justify-center" aria-hidden="true">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                  </div>
+                  <a 
+                    href="tel:+5551996138467" 
+                    className="text-white hover:text-red-400 transition-colors duration-200"
+                    aria-label="Ligar para +55 51 99613-8467"
+                  >
+                    +55 (51) 99613-8467
+                  </a>
+                </div>
+
+                {/* Localização */}
+                <div className="flex items-center justify-center space-x-4">
+                  <div className="w-6 h-6 flex items-center justify-center" aria-hidden="true">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-white">Torres, Brasil</span>
+                </div>
+              </address>
+            </div>
+
+            {/* Botões de CTA - Movidos para baixo */}
+            <div className="space-y-4 mt-8">
               {/* WhatsApp */}
               <a 
-                href="https://wa.me/5561898138467" 
+                href="https://wa.me/5551996138467" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
@@ -110,50 +170,99 @@ export default function Connect() {
 
           {/* Coluna Direita - Formulário */}
           <div className="bg-gray-800 p-8 rounded-lg">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form 
+              name="contato-site"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              action="/contato/sucesso"
+              onSubmit={handleSubmit} 
+              className="space-y-6"
+              aria-label="Formulário de contato"
+            >
+              {/* Campos ocultos para Netlify Forms */}
+              <input type="hidden" name="form-name" value="contato-site" />
+              <p style={{display:"none"}}>
+                <label>Não preencha: <input name="bot-field" /></label>
+              </p>
+
               {/* Nome */}
               <div>
+                <label htmlFor="name" className="sr-only">
+                  Nome completo
+                </label>
                 <input
                   type="text"
+                  id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
                   placeholder="Nome"
                   required
-                  className="w-full bg-gray-900 border border-gray-600 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:border-red-500 transition-colors duration-200"
+                  aria-required="true"
+                  className="w-full bg-gray-900 border border-gray-600 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200"
                 />
               </div>
 
               {/* Email */}
               <div>
+                <label htmlFor="email" className="sr-only">
+                  Endereço de email
+                </label>
                 <input
                   type="email"
+                  id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="Email"
                   required
-                  className="w-full bg-gray-900 border border-gray-600 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:border-red-500 transition-colors duration-200"
+                  aria-required="true"
+                  className="w-full bg-gray-900 border border-gray-600 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200"
+                />
+              </div>
+
+              {/* Assunto */}
+              <div>
+                <label htmlFor="subject" className="sr-only">
+                  Assunto da mensagem
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject || ''}
+                  onChange={handleInputChange}
+                  placeholder="Assunto"
+                  required
+                  aria-required="true"
+                  className="w-full bg-gray-900 border border-gray-600 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200"
                 />
               </div>
 
               {/* Mensagem */}
               <div>
+                <label htmlFor="message" className="sr-only">
+                  Sua mensagem
+                </label>
                 <textarea
+                  id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Sua Mensagem"
                   rows={6}
                   required
-                  className="w-full bg-gray-900 border border-gray-600 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:border-red-500 transition-colors duration-200 resize-none"
+                  aria-required="true"
+                  className="w-full bg-gray-900 border border-gray-600 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200 resize-none"
                 />
               </div>
 
               {/* Botão Enviar */}
               <button
                 type="submit"
-                className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+                className="w-full bg-red-600 hover:bg-red-700 focus:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-colors duration-200"
+                aria-describedby="form-description"
               >
                 Enviar Mensagem
               </button>
@@ -162,5 +271,6 @@ export default function Connect() {
         </div>
       </Container>
     </section>
+    </>
   );
 }

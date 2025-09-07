@@ -308,7 +308,7 @@ Thank you!`;
       <li class="znt-tier-card ${activeClass} ${flagClass}" role="listitem">
         ${tier.flag ? `<h4 class="znt-tier-card_flag">${tier.flag}</h4>` : ''}
         ${selectedLabel}
-        ${tier.imageURL ? `<img src="${tier.imageURL}" alt="" class="znt-tier-card_image">` : ''}
+        ${tier.imageURL ? `<img src="${tier.imageURL}" alt="Tier ${tier.name} image" class="znt-tier-card_image" loading="lazy" decoding="async">` : ''}
         ${maxImages ? `<p class="znt-tier-card_top-amount"><span class="znt-tier-card_top-amount_2">${maxImages}</span> <span class="znt-tier-card_top-amount_3">images</span></p>` : ''}
         ${tier.productLinkLabel ? `<h4 class="znt-tier-card_top-text">${tier.productLinkLabel}</h4>` : ''}
         <p class="znt-tier-card_heading">$${tier.totalCost} <span>/Pack</span></p>
@@ -328,7 +328,7 @@ Thank you!`;
       <li class="znt-tier-card ${activeClass} ${flagClass}" role="listitem">
         ${tier.flag ? `<h4 class="znt-tier-card_flag">${tier.flag}</h4>` : ''}
         ${selectedLabel}
-        ${tier.imageURL ? `<img src="${tier.imageURL}" alt="" class="znt-tier-card_image">` : ''}
+        ${tier.imageURL ? `<img src="${tier.imageURL}" alt="Tier ${tier.name} image" class="znt-tier-card_image" loading="lazy" decoding="async">` : ''}
         ${maxImages || tier.itemsIncluded ? `<p class="znt-tier-card_top-amount"><span class="znt-tier-card_top-amount_2">${maxImages}</span> <span class="znt-tier-card_top-amount_3">images</span></p>` : ''}
         ${tier.productLinkLabel ? `<h4 class="znt-tier-card_top-text">${tier.productLinkLabel}</h4>` : ''}
         <p class="znt-tier-card_heading">${tier.totalCost}</p>
