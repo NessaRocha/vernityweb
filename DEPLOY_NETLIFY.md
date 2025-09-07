@@ -119,6 +119,38 @@ const nextConfig: NextConfig = {
 
 ---
 
+## ✅ **PASSO 3.5: Função CRM** *(Concluído)*
+
+### **3.5.1 Função Netlify Criada:**
+```typescript
+// netlify/functions/forward-to-crm.ts
+export const handler = async (event: any) => {
+  // Processa dados do formulário
+  // Envia para GHL_WEBHOOK_URL ou FALLBACK_WEBHOOK_URL
+  // Log se nenhum webhook configurado
+}
+```
+
+### **3.5.2 Configuração de Webhooks:**
+- ✅ **GHL_WEBHOOK_URL:** URL principal do GoHighLevel
+- ✅ **FALLBACK_WEBHOOK_URL:** URL de fallback
+- ✅ **Fallback inteligente:** Se GHL não existir, usa fallback
+- ✅ **Log de segurança:** Se nenhum webhook, apenas loga
+
+### **3.5.3 Dados Enviados:**
+```json
+{
+  "name": "Nome do usuário",
+  "email": "email@exemplo.com",
+  "subject": "Assunto da mensagem",
+  "message": "Conteúdo da mensagem",
+  "source": "Website Vernety Web / Netlify",
+  "submittedAt": "2025-01-09T10:30:00.000Z"
+}
+```
+
+---
+
 ## 🔄 **PASSO 4: Deploy no Netlify** *(Em Andamento)*
 
 ### **4.1 Preparação:**
@@ -138,9 +170,63 @@ const nextConfig: NextConfig = {
 
 ### **4.3 Configurações Pós-Deploy:**
 - [ ] Configurar notificações de formulário
+- [ ] Configurar função CRM no painel Netlify
 - [ ] Testar envio de formulário
 - [ ] Verificar página de sucesso
 - [ ] Configurar domínio personalizado (se necessário)
+
+---
+
+## 📋 **VERIFICAÇÃO DE ETAPAS - STATUS**
+
+### **✅ ETAPA 1: Função CRM Criada** *(Concluída)*
+- [x] ✅ Arquivo `netlify/functions/forward-to-crm.ts` criado
+- [x] ✅ Código implementado com fallback inteligente
+- [x] ✅ Configuração `netlify.toml` atualizada
+- [x] ✅ Redirecionamento configurado
+
+### **✅ ETAPA 2: Deploy Realizado** *(Concluída)*
+- [x] ✅ Código commitado e enviado para GitHub
+- [x] ✅ Deploy automático executado no Netlify
+- [x] ✅ Função disponível em `/.netlify/functions/forward-to-crm`
+- [x] ✅ Formulário estático criado para detecção do Netlify
+
+### **🔄 ETAPA 3: Ligar Forms → Function** *(Pendente)*
+**Ação necessária no painel Netlify:**
+1. **Acesse:** [netlify.com](https://netlify.com) → Seu Site
+2. **Vá em:** Settings → Forms → Form submissions
+3. **Clique em:** Outgoing notifications → Add notification
+4. **Configure:**
+   - **Tipo:** Netlify Function
+   - **Função:** forward-to-crm
+   - **Salve**
+
+### **🔄 ETAPA 4: Configurar FALLBACK_WEBHOOK_URL** *(Pendente)*
+
+#### **Opção A: Via CLI (Recomendado)**
+```bash
+# Configurar fallback para teste
+npx netlify env:set FALLBACK_WEBHOOK_URL "https://SUA_URL_TEMPORARIA_DO_WEBHOOK"
+
+# Verificar se foi configurado
+npx netlify env:list
+```
+
+#### **Opção B: Via Painel Web**
+1. **Acesse:** Site Settings → Environment variables
+2. **Adicione:** `FALLBACK_WEBHOOK_URL` = URL temporária
+3. **Salve**
+
+#### **Opção C: Notificação por Email (Alternativa)**
+- **Acesse:** Settings → Forms → Notifications → Email
+- **Configure:** Email para receber notificações
+- **Ative:** Notificações por email
+
+### **🔄 ETAPA 5: Testar Integração** *(Pendente)*
+1. **Envie um formulário** no site
+2. **Verifique:** Dashboard → Forms → Submissions
+3. **Confirme:** Dados chegaram no webhook/CRM
+4. **Teste:** Logs da função no Netlify
 
 ---
 
@@ -174,6 +260,10 @@ const nextConfig: NextConfig = {
 - ✅ Estados de loading e sucesso implementados
 - ✅ Mensagem de sucesso com auto-dismiss (4 segundos)
 - ✅ Botão "Enviar Outra Mensagem" removido
+- ✅ Função Netlify criada para encaminhar dados para CRM
+- ✅ Configuração de webhooks (GHL_WEBHOOK_URL e FALLBACK_WEBHOOK_URL)
+- ✅ Instruções de configuração no painel Netlify adicionadas
+- ✅ Opção de configuração via CLI incluída
 
 ### **Próximas Atualizações:**
 - [ ] Log do processo de deploy

@@ -68,3 +68,13 @@
 # Configurações de deploy
 [build.processing.images]
   compress = true
+
+# Configurações para Netlify Functions
+[functions]
+  directory = "netlify/functions"
+
+# Configurações de redirecionamento para formulários
+[[redirects]]
+  from = "/api/forward-to-crm"
+  to = "/.netlify/functions/forward-to-crm"
+  status = 200
