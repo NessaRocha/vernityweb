@@ -19,11 +19,6 @@ export default function Connect() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Aqui você pode adicionar a lógica para enviar o formulário
-    // Formulário enviado com sucesso
-  };
 
   return (
     <>
@@ -176,7 +171,6 @@ export default function Connect() {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               action="/contato/sucesso"
-              onSubmit={handleSubmit} 
               className="space-y-6"
               aria-label="Formulário de contato"
             >

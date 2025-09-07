@@ -123,6 +123,7 @@ const nextConfig: NextConfig = {
 
 ### **4.1 Preparação:**
 - [x] ✅ Erros de ESLint corrigidos (Link components)
+- [x] ✅ Formulário ajustado para submit nativo (removido preventDefault)
 - [ ] Fazer commit de todos os arquivos
 - [ ] Push para repositório GitHub
 - [ ] Verificar se build local funciona: `npm run build`
@@ -166,6 +167,7 @@ const nextConfig: NextConfig = {
 - ✅ Página de sucesso implementada
 - ✅ Erros de ESLint corrigidos (Link components)
 - ✅ Documento atualizado com fluxo de deploy automático
+- ✅ Formulário ajustado para submit nativo (removido preventDefault e onSubmit)
 
 ### **Próximas Atualizações:**
 - [ ] Log do processo de deploy
