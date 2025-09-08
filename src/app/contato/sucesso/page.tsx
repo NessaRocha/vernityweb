@@ -12,7 +12,10 @@ export default function ContatoSucesso() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h1 className="text-3xl font-bold text-white mb-2">
+            <h1 
+              className="text-3xl font-bold text-white mb-2"
+              style={{ fontSize: 'clamp(1.5rem, 4vw, 2rem)' }}
+            >
               Mensagem Enviada!
             </h1>
             <p className="text-gray-300 mb-8">

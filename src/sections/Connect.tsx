@@ -52,6 +52,7 @@ export default function Connect() {
           <h1 
             id="contact-heading"
             className="text-4xl md:text-5xl font-bold mb-4 text-white"
+            style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}
           >
             <span className="text-white">Entre em</span>{" "}
             <span className="text-red-500">Contato</span>
