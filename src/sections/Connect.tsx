@@ -5,7 +5,7 @@ import { Container, GhlFormIframe } from '@/components/ui';
 
 export default function Connect() {
   // URL do formulário GHL - Sites → Forms → (seu formulário) → Integrate/Embed → copiar URL completa
-  const GHL_FORM_URL = "https://api.leadconnectorhq.com/widget/form/D2IyQTHFUCwKIXbgZU2P";
+  const GHL_FORM_URL = "https://api.leadconnectorhq.com/widget/form/0aIDsHXZl6w4uZQXecUo";
 
   return (
     <>
@@ -42,7 +42,7 @@ export default function Connect() {
       />
       
       <section 
-        className="py-24 bg-black" 
+        className="pt-12 pb-24 bg-black" 
         id="contato"
         aria-labelledby="contact-heading"
       >
@@ -62,22 +62,67 @@ export default function Connect() {
         </div>
 
         {/* Layout de 2 Colunas */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
           
           {/* Coluna Esquerda - Informações de Contato */}
-          <div className="flex flex-col justify-between h-full">
-            <div className="space-y-8">
+          <div className="flex flex-col h-full">
+            <div className="space-y-4 flex-1">
               {/* Descrição */}
               <p className="text-lg text-gray-200 leading-relaxed">
                 Transforme sua visão em realidade digital. Desenvolva soluções web únicas que elevam sua marca e geram resultados.
               </p>
-            </div>
 
-            {/* Informações de Contato - Centralizadas verticalmente */}
-            <div className="flex-1 flex items-center justify-center">
-              <address className="space-y-6 not-italic text-center">
+              {/* Soluções e Benefícios */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-white">Nossas Soluções</h3>
+                
+                <div className="grid grid-cols-1 gap-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-white font-medium">Sites Responsivos</h4>
+                      <p className="text-gray-300 text-sm">Design moderno que funciona perfeitamente em todos os dispositivos</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-white font-medium">Performance Otimizada</h4>
+                      <p className="text-gray-300 text-sm">Carregamento rápido e otimização para SEO e conversões</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-white font-medium">Suporte Contínuo</h4>
+                      <p className="text-gray-300 text-sm">Acompanhamento e manutenção para garantir o melhor desempenho</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Garantia de Qualidade */}
+              <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
+                <div className="flex items-center space-x-3 mb-2">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <h4 className="text-white font-semibold">Garantia de Qualidade</h4>
+                </div>
+                <p className="text-gray-300 text-sm">
+                  Trabalhamos com as melhores práticas de desenvolvimento, garantindo código limpo, 
+                  segurança e performance excepcional para seu projeto.
+                </p>
+              </div>
+
+              {/* Informações de Contato */}
+              <address className="space-y-4 not-italic">
                 {/* Email */}
-                <div className="flex items-center justify-center space-x-4">
+                <div className="flex items-center space-x-4">
                   <div className="w-6 h-6 flex items-center justify-center" aria-hidden="true">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -94,7 +139,7 @@ export default function Connect() {
                 </div>
 
                 {/* Telefone */}
-                <div className="flex items-center justify-center space-x-4">
+                <div className="flex items-center space-x-4">
                   <div className="w-6 h-6 flex items-center justify-center" aria-hidden="true">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -110,7 +155,7 @@ export default function Connect() {
                 </div>
 
                 {/* Localização */}
-                <div className="flex items-center justify-center space-x-4">
+                <div className="flex items-center space-x-4">
                   <div className="w-6 h-6 flex items-center justify-center" aria-hidden="true">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
@@ -121,8 +166,8 @@ export default function Connect() {
               </address>
             </div>
 
-            {/* Botões de CTA - Movidos para baixo */}
-            <div className="space-y-4 mt-8">
+            {/* Botões de CTA - Alinhados com a parte inferior do formulário */}
+            <div className="space-y-3 mt-8">
               {/* WhatsApp */}
               <a 
                 href="https://wa.me/5551996138467" 
@@ -151,7 +196,7 @@ export default function Connect() {
           </div>
 
           {/* Coluna Direita - Formulário GHL */}
-          <div className="bg-gray-800 p-8 rounded-lg">
+          <div>
             <GhlFormIframe url={GHL_FORM_URL} />
           </div>
         </div>

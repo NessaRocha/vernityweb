@@ -241,6 +241,85 @@ a,
   }
 }
 
+/* Nota: Iframes de domínios diferentes (como GHL) não podem ser customizados via CSS externo
+   devido à política Same-Origin Policy do navegador.
+   A customização deve ser feita no próprio painel do GHL. */
+
+/* Estilos para mensagens de confirmação do GHL - aplicados globalmente */
+.ghl-form-confirmation,
+.form-confirmation,
+.success-message,
+.confirmation-message,
+[class*="confirmation"],
+[class*="success"],
+[class*="thank"],
+[class*="submitted"] {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  color: white !important;
+  border: 2px solid #047857 !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  margin: 20px 0 !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+  font-family: ui-sans-serif, system-ui, sans-serif !important;
+}
+
+
+.ghl-form-confirmation h1,
+.ghl-form-confirmation h2,
+.ghl-form-confirmation h3,
+.form-confirmation h1,
+.form-confirmation h2,
+.form-confirmation h3,
+.success-message h1,
+.success-message h2,
+.success-message h3,
+.confirmation-message h1,
+.confirmation-message h2,
+.confirmation-message h3,
+[class*="confirmation"] h1,
+[class*="confirmation"] h2,
+[class*="confirmation"] h3,
+[class*="success"] h1,
+[class*="success"] h2,
+[class*="success"] h3,
+[class*="thank"] h1,
+[class*="thank"] h2,
+[class*="thank"] h3 {
+  color: white !important;
+  font-size: 1.5rem !important;
+  margin-bottom: 10px !important;
+  font-weight: 700 !important;
+}
+
+.ghl-form-confirmation p,
+.form-confirmation p,
+.success-message p,
+.confirmation-message p,
+[class*="confirmation"] p,
+[class*="success"] p,
+[class*="thank"] p {
+  color: white !important;
+  font-size: 1.1rem !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+/* Estilos para ícones de sucesso */
+.ghl-form-confirmation .icon,
+.form-confirmation .icon,
+.success-message .icon,
+.confirmation-message .icon,
+[class*="confirmation"] .icon,
+[class*="success"] .icon,
+[class*="thank"] .icon {
+  color: white !important;
+  font-size: 2rem !important;
+  margin-bottom: 15px !important;
+}
+
 
 
 

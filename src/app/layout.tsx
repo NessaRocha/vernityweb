@@ -72,6 +72,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//linkedin.com" />
         <link rel="dns-prefetch" href="//instagram.com" />
         <link rel="dns-prefetch" href="//wa.me" />
+        <link rel="dns-prefetch" href="//api.leadconnectorhq.com" />
         
         {/* Preconnect for critical resources */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -80,6 +81,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://linkedin.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://instagram.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://wa.me" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://api.leadconnectorhq.com" crossOrigin="anonymous" />
         
       </head>
       <body
