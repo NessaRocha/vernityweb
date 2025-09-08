@@ -96,52 +96,67 @@ class GoogleAnalytics {
 }
 
 /**
- * Serviço de Facebook Pixel
+ * Serviço de Meta Pixel (versão moderna)
  */
-class FacebookPixel {
+class MetaPixel {
   private isInitialized = false;
 
   /**
-   * Inicializa o Facebook Pixel
+   * Inicializa o Meta Pixel com consentimento
    */
   initialize(): void {
     if (typeof window === 'undefined' || this.isInitialized) return;
 
     if (config.analytics.facebookPixelId) {
-      // Carrega o script do Facebook Pixel
+      // Carrega o script do Meta Pixel (versão moderna)
       const script = document.createElement('script');
-      script.innerHTML = `
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '${config.analytics.facebookPixelId}');
-        fbq('track', 'PageView');
-      `;
+      script.async = true;
+      script.src = 'https://connect.facebook.net/en_US/fbevents.js';
       document.head.appendChild(script);
+
+      // Configura o Meta Pixel com consentimento
+      window.fbq = window.fbq || function(...args: unknown[]) {
+        (window.fbq as any).q = (window.fbq as any).q || [];
+        (window.fbq as any).q.push(args);
+      };
+
+      // Inicializa com consentimento (GDPR compliant)
+      window.fbq('consent', 'grant');
+      window.fbq('init', config.analytics.facebookPixelId, {
+        autoConfig: true,
+        debug: false
+      });
+      
+      // Só tracka PageView se consentimento foi dado
+      if (this.hasConsent()) {
+        window.fbq('track', 'PageView');
+      }
 
       this.isInitialized = true;
     }
   }
 
   /**
-   * Envia evento de página visualizada
+   * Verifica se o usuário deu consentimento
+   */
+  private hasConsent(): boolean {
+    return localStorage.getItem('cookie-consent') === 'accepted';
+  }
+
+  /**
+   * Envia evento de página visualizada (com consentimento)
    */
   trackPageView(): void {
-    if (!this.isInitialized || typeof window === 'undefined') return;
+    if (!this.isInitialized || typeof window === 'undefined' || !this.hasConsent()) return;
 
     window.fbq('track', 'PageView');
   }
 
   /**
-   * Envia evento customizado
+   * Envia evento customizado (com consentimento)
    */
   trackEvent(eventName: string, parameters?: Record<string, unknown>): void {
-    if (!this.isInitialized || typeof window === 'undefined') return;
+    if (!this.isInitialized || typeof window === 'undefined' || !this.hasConsent()) return;
 
     window.fbq('track', eventName, parameters);
   }
@@ -152,11 +167,11 @@ class FacebookPixel {
  */
 export class AnalyticsService {
   private googleAnalytics: GoogleAnalytics;
-  private facebookPixel: FacebookPixel;
+  private metaPixel: MetaPixel;
 
   constructor() {
     this.googleAnalytics = new GoogleAnalytics();
-    this.facebookPixel = new FacebookPixel();
+    this.metaPixel = new MetaPixel();
   }
 
   /**
@@ -164,7 +179,7 @@ export class AnalyticsService {
    */
   initialize(): void {
     this.googleAnalytics.initialize();
-    this.facebookPixel.initialize();
+    this.metaPixel.initialize();
   }
 
   /**
@@ -172,7 +187,7 @@ export class AnalyticsService {
    */
   trackPageView(data: PageViewData): void {
     this.googleAnalytics.trackPageView(data);
-    this.facebookPixel.trackPageView();
+    this.metaPixel.trackPageView();
   }
 
   /**
@@ -180,7 +195,7 @@ export class AnalyticsService {
    */
   trackEvent(event: AnalyticsEvent): void {
     this.googleAnalytics.trackEvent(event);
-    this.facebookPixel.trackEvent(event.action, event.customParameters);
+    this.metaPixel.trackEvent(event.action, event.customParameters);
   }
 
   /**
