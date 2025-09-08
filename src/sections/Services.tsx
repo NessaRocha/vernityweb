@@ -88,6 +88,7 @@ export default function Services({
         
         <div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          role="list"
           aria-label="Lista de serviços oferecidos"
         >
           {services.map((service, index) => (
@@ -95,6 +96,7 @@ export default function Services({
               key={index}
               className="bg-black/60 backdrop-blur-sm rounded-2xl p-8 hover:bg-black/80 hover:shadow-2xl hover:shadow-red-500/20 hover:border hover:border-red-500/30 hover:scale-105 transition-all duration-500 ease-out group cursor-pointer relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-black focus:scale-105"
               tabIndex={0}
+              role="button"
               aria-label={`Serviço: ${service.title}`}
               aria-describedby={`service-desc-${index}`}
               onKeyDown={(e) => {
