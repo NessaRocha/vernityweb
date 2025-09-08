@@ -21,12 +21,7 @@ export default function Banner() {
            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
          />
         
-        {/* Overlay suave e harmônico */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/15 via-transparent to-transparent opacity-25" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/8 via-transparent to-transparent opacity-15" />
-        
-        {/* Overlay escuro adicional para mobile - MÍNIMO */}
-        <div className="absolute inset-0 bg-black/8 lg:hidden" />
+        {/* Overlay removido - apenas atrás do texto para contraste */}
       </div>
       
       {/* Harmonizing Transparent Element - Behind Text, Over Image */}
@@ -53,6 +48,8 @@ export default function Banner() {
                          lg:pr-8 lg:max-w-2xl">
             {/* Main heading with improved alignment and spacing */}
             <div className="relative">
+              {/* Overlay sutil para garantir contraste do texto - WCAG 2.2 AA 1.4.3 */}
+              <div className="absolute inset-0 bg-black/20 rounded-2xl -m-1 z-0 blur-sm" aria-hidden="true"></div>
               <h1 
                 className="relative z-10 mb-6 md:mb-8 leading-tight text-white px-1 sm:px-2 
                            font-bold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 
