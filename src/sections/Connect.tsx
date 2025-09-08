@@ -78,7 +78,7 @@ export default function Connect() {
                 
                 <div className="grid grid-cols-1 gap-4">
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0" style={{ width: '8px', height: '8px' }}></div>
                     <div>
                       <h4 className="text-white font-medium">Sites Responsivos</h4>
                       <p className="text-gray-300 text-sm">Design moderno que funciona perfeitamente em todos os dispositivos</p>
@@ -86,7 +86,7 @@ export default function Connect() {
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0" style={{ width: '8px', height: '8px' }}></div>
                     <div>
                       <h4 className="text-white font-medium">Performance Otimizada</h4>
                       <p className="text-gray-300 text-sm">Carregamento rápido e otimização para SEO e conversões</p>
@@ -94,7 +94,7 @@ export default function Connect() {
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0" style={{ width: '8px', height: '8px' }}></div>
                     <div>
                       <h4 className="text-white font-medium">Suporte Contínuo</h4>
                       <p className="text-gray-300 text-sm">Acompanhamento e manutenção para garantir o melhor desempenho</p>

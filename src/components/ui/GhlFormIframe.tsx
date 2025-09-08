@@ -49,7 +49,6 @@ export default function GhlFormIframe({ url }: Props) {
         onLoad={handleIframeLoad}
         // Otimizações para Lighthouse SEM lazy loading
         allow="forms"
-        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
         // Preload hints para melhor performance
         data-preload="true"
       />
