@@ -30,6 +30,12 @@ Para resolver definitivamente, configure no painel GHL:
 - Verifique no DevTools se IDs são únicos
 - Execute auditoria de acessibilidade
 
+## 🔄 **Reset Automático do Formulário**
+- ✅ Detecta submissão automaticamente
+- ✅ Reseta formulário após 5 segundos
+- ✅ Botão "Novo Envio" para reset manual
+- ✅ Permite múltiplos envios sem recarregar página
+
 ## 🛡️ **Garantias de Segurança**
 - ✅ Não compromete funcionamento do formulário
 - ✅ Não afeta performance do Lighthouse

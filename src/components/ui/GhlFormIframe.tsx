@@ -6,13 +6,20 @@ type Props = { url: string };
 
 export default function GhlFormIframe({ url }: Props) {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [resetKey, setResetKey] = useState(0);
 
   useEffect(() => {
     // Nota: Iframes de domínios diferentes (como GHL) não podem ser customizados via CSS externo
     // devido à política Same-Origin Policy do navegador
     // A customização deve ser feita no próprio painel do GHL
     console.log('GHL Form iframe carregado - customização deve ser feita no painel GHL');
-  }, []);
+    
+    // Verificar submissão a cada 2 segundos
+    const interval = setInterval(detectFormSubmission, 2000);
+    
+    return () => clearInterval(interval);
+  }, [formSubmitted]);
 
   // Função para corrigir IDs duplicados no iframe (quando possível)
   const fixDuplicateIds = () => {
@@ -54,8 +61,41 @@ export default function GhlFormIframe({ url }: Props) {
 
   const handleIframeLoad = () => {
     setIsLoaded(true);
+    setFormSubmitted(false);
     // Tentar corrigir IDs duplicados após o iframe carregar
     setTimeout(fixDuplicateIds, 1000);
+  };
+
+  // Função para resetar o formulário
+  const resetForm = () => {
+    setFormSubmitted(false);
+    setResetKey(prev => prev + 1);
+    setIsLoaded(false);
+  };
+
+  // Função para detectar submissão do formulário
+  const detectFormSubmission = () => {
+    try {
+      const iframe = document.querySelector('iframe[src*="leadconnectorhq.com"]') as HTMLIFrameElement;
+      if (iframe && iframe.contentDocument) {
+        const doc = iframe.contentDocument;
+        
+        // Verificar se há mensagem de sucesso
+        const successMessage = doc.querySelector('.success-message, .form-success, [class*="success"]');
+        if (successMessage && !formSubmitted) {
+          setFormSubmitted(true);
+          console.log('Formulário GHL enviado com sucesso - preparando reset');
+          
+          // Resetar após 5 segundos
+          setTimeout(() => {
+            resetForm();
+          }, 5000);
+        }
+      }
+    } catch (error) {
+      // Same-Origin Policy impede acesso - normal
+      console.log('Não foi possível detectar submissão (Same-Origin Policy)');
+    }
   };
 
   return (
@@ -73,28 +113,42 @@ export default function GhlFormIframe({ url }: Props) {
         </div>
       )}
       
-      {/* Iframe otimizado - SEM lazy loading */}
-      <iframe
-        src={url}
-        style={{
-          width: "100%",
-          minHeight: 600,
-          border: "none",
-          borderRadius: 12,
-          background: "transparent",
-          opacity: isLoaded ? 1 : 0,
-          transition: "opacity 0.3s ease-in-out"
-        }}
-        title="Formulário de Contato"
-        onLoad={handleIframeLoad}
-        // Otimizações para Lighthouse SEM lazy loading
-        allow="forms"
-        // Preload hints para melhor performance
-        data-preload="true"
-        // Atributos de acessibilidade
-        role="form"
-        aria-label="Formulário de contato"
-      />
+            {/* Iframe otimizado - SEM lazy loading */}
+            <iframe
+              key={resetKey}
+              src={url}
+              style={{
+                width: "100%",
+                minHeight: 600,
+                border: "none",
+                borderRadius: 12,
+                background: "transparent",
+                opacity: isLoaded ? 1 : 0,
+                transition: "opacity 0.3s ease-in-out"
+              }}
+              title="Formulário de Contato"
+              onLoad={handleIframeLoad}
+              // Otimizações para Lighthouse SEM lazy loading
+              allow="forms"
+              // Preload hints para melhor performance
+              data-preload="true"
+              // Atributos de acessibilidade
+              role="form"
+              aria-label="Formulário de contato"
+            />
+      
+      {/* Botão de reset manual - aparece após submissão */}
+      {formSubmitted && (
+        <div className="absolute top-4 right-4 z-20">
+          <button
+            onClick={resetForm}
+            className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 shadow-lg"
+            aria-label="Enviar novo formulário"
+          >
+            Novo Envio
+          </button>
+        </div>
+      )}
     </div>
   );
 }
