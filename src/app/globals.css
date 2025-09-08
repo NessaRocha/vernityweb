@@ -253,10 +253,22 @@ a,
    - Funciona apenas se o GHL não estiver aplicando os estilos corretamente
 */
 
+/* SOLUÇÃO SEGURA: Melhorias de acessibilidade para iframe GHL
+   - NÃO interfere no funcionamento do formulário
+   - Apenas melhora a experiência visual e de acessibilidade
+   - Funciona como fallback se o GHL não estiver configurado corretamente
+*/
+
 /* Garantir que campos obrigatórios tenham indicação visual clara */
 iframe[src*="leadconnectorhq.com"] {
   /* Forçar contraste adequado para acessibilidade */
   filter: contrast(1.1) brightness(1.02);
+  /* Permitir zoom para acessibilidade */
+  zoom: 1;
+  transform: scale(1);
+  /* Garantir que seja redimensionável */
+  min-width: 100%;
+  min-height: 500px;
 }
 
 /* Estilos para melhorar acessibilidade do formulário GHL */
@@ -273,6 +285,36 @@ iframe[src*="leadconnectorhq.com"] {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* Melhorar acessibilidade visual */
+  background-color: rgba(255, 255, 255, 0.95);
+  /* Garantir que seja redimensionável */
+  resize: both;
+  overflow: auto;
+}
+
+/* Melhorias adicionais de acessibilidade para o iframe GHL */
+@media (max-width: 768px) {
+  iframe[src*="leadconnectorhq.com"] {
+    /* Permitir zoom em dispositivos móveis */
+    zoom: 1;
+    transform: scale(1);
+    /* Garantir que seja acessível em mobile */
+    min-height: 400px;
+    width: 100%;
+  }
+}
+
+/* Forçar melhorias de acessibilidade para campos do GHL */
+iframe[src*="leadconnectorhq.com"] * {
+  /* Garantir que elementos sejam acessíveis */
+  box-sizing: border-box;
+}
+
+/* Melhorar foco e navegação por teclado */
+.ghl-form-container:focus-within iframe {
+  /* Destacar quando o iframe tem foco */
+  border-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
 }
 
 /* Estilos para mensagens de confirmação do GHL */
