@@ -266,6 +266,9 @@ iframe[src*="leadconnectorhq.com"] {
   min-height: 500px;
 }
 
+/* Nota: IDs duplicados no GHL devem ser corrigidos no painel do GHL */
+/* CSS não pode modificar IDs dentro de iframes de domínios diferentes */
+
 /* Estilos para melhorar acessibilidade do formulário GHL */
 .ghl-form-container {
   /* Garantir que o container tenha foco adequado */
