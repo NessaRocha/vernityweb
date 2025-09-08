@@ -1,50 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Container } from '@/components/ui';
+import React from 'react';
+import { Container, GhlFormIframe } from '@/components/ui';
 
 export default function Connect() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simular envio (o Netlify processará automaticamente)
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      // Limpar formulário
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      
-      // Esconder mensagem de sucesso após 4 segundos
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 4000);
-    }, 1000);
-  };
-
+  // URL do formulário GHL - Sites → Forms → (seu formulário) → Integrate/Embed → copiar URL completa
+  const GHL_FORM_URL = "https://api.leadconnectorhq.com/widget/form/D2IyQTHFUCwKIXbgZU2P";
 
   return (
     <>
@@ -189,118 +150,9 @@ export default function Connect() {
             </div>
           </div>
 
-          {/* Coluna Direita - Formulário */}
+          {/* Coluna Direita - Formulário GHL */}
           <div className="bg-gray-800 p-8 rounded-lg">
-            <form 
-              name="contato-site"
-              method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              onSubmit={handleSubmit}
-              className="space-y-6"
-              aria-label="Formulário de contato"
-            >
-              {/* Campos ocultos para Netlify Forms */}
-              <input type="hidden" name="form-name" value="contato-site" />
-              <p style={{display:"none"}}>
-                <label>Não preencha: <input name="bot-field" /></label>
-              </p>
-
-              {/* Nome */}
-              <div>
-                <label htmlFor="name" className="sr-only">
-                  Nome completo
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  placeholder="Nome"
-                  required
-                  aria-required="true"
-                  className="w-full bg-gray-900 border border-gray-600 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200"
-                />
-              </div>
-
-              {/* Email */}
-              <div>
-                <label htmlFor="email" className="sr-only">
-                  Endereço de email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  placeholder="Email"
-                  required
-                  aria-required="true"
-                  className="w-full bg-gray-900 border border-gray-600 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200"
-                />
-              </div>
-
-              {/* Assunto */}
-              <div>
-                <label htmlFor="subject" className="sr-only">
-                  Assunto da mensagem
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject || ''}
-                  onChange={handleInputChange}
-                  placeholder="Assunto"
-                  required
-                  aria-required="true"
-                  className="w-full bg-gray-900 border border-gray-600 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200"
-                />
-              </div>
-
-              {/* Mensagem */}
-              <div>
-                <label htmlFor="message" className="sr-only">
-                  Sua mensagem
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  placeholder="Sua Mensagem"
-                  rows={6}
-                  required
-                  aria-required="true"
-                  className="w-full bg-gray-900 border border-gray-600 text-white placeholder-gray-400 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200 resize-none"
-                />
-              </div>
-
-              {/* Mensagem de Sucesso */}
-              {isSubmitted && (
-                <div className="bg-green-600 text-white p-4 rounded-lg text-center">
-                  <div className="flex items-center justify-center mb-2">
-                    <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="font-semibold">Mensagem Enviada!</span>
-                  </div>
-                  <p className="text-sm">Obrigado pelo seu contato. Retornaremos em breve!</p>
-                </div>
-              )}
-
-              {/* Botão Enviar */}
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-red-600 hover:bg-red-700 focus:bg-red-700 disabled:bg-gray-500 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-colors duration-200"
-                aria-describedby="form-description"
-              >
-                {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
-              </button>
-            </form>
+            <GhlFormIframe url={GHL_FORM_URL} />
           </div>
         </div>
       </Container>

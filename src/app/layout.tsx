@@ -80,6 +80,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://linkedin.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://instagram.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://wa.me" crossOrigin="anonymous" />
+        
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
