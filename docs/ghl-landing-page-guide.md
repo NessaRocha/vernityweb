@@ -34,31 +34,6 @@ Campos essenciais:
 
 ---
 
-## 🚀 How to Implement GHL in the Project
-
-### 1. Configurar no GHL
-```
-1. Criar conta: https://app.gohighlevel.com
-2. Sites → Forms → Create New Form
-3. Configurar campos obrigatórios
-4. Publicar formulário
-5. Copiar URL do embed
-```
-
-### 2. Integrar no Next.js
-```typescript
-// Usar componente existente
-<GhlFormIframe url="https://api.leadconnectorhq.com/widget/form/SEU_FORM_ID" />
-```
-
-### 3. Deploy
-```bash
-npm run build
-git push origin master
-```
-
----
-
 ## 🔧 Implementation Options
 
 ### 1. **GHL Standalone** (Recomendado)
@@ -96,26 +71,26 @@ Final do dia: Automação
 #### O que é?
 Formulário personalizado integrado com GHL.
 
-#### Roadmap (2 semanas)
+#### Roadmap (1 dia)
 ```
-Semana 1: Desenvolvimento
-├── Criar formulário customizado
-├── Implementar validações
-└── Conectar com GHL API
+Manhã: Desenvolvimento
+├── Criar formulário customizado (2h)
+├── Implementar validações (1h)
+└── Conectar com GHL API (1h)
 
-Semana 2: Deploy
-├── Testar integração
-├── Configurar automação
-└── Deploy em produção
+Tarde: Deploy
+├── Testar integração (30 min)
+├── Configurar automação (30 min)
+└── Deploy em produção (30 min)
 ```
 
 #### Vantagens
 - ✅ **Design personalizado**: Controle total
 - ✅ **Performance**: Formulário nativo
+- ✅ **Rápido**: 1 dia para implementar
 
 #### Desvantagens
 - ❌ **Mais complexo**: Requer desenvolvimento
-- ❌ **Mais tempo**: 2 semanas
 
 ---
 
@@ -124,22 +99,23 @@ Semana 2: Deploy
 #### O que é?
 JotForms para formulários avançados + GHL para automação.
 
-#### Roadmap (2 semanas)
+#### Roadmap (1 dia)
 ```
-Semana 1: Configuração
-├── Criar conta JotForms
-├── Configurar integração GHL
-└── Criar formulário avançado
+Manhã: Configuração
+├── Criar conta JotForms (30 min)
+├── Configurar integração GHL (1h)
+└── Criar formulário avançado (1h)
 
-Semana 2: Deploy
-├── Integrar no Next.js
-├── Testar automação
-└── Deploy em produção
+Tarde: Deploy
+├── Integrar no Next.js (1h)
+├── Testar automação (30 min)
+└── Deploy em produção (30 min)
 ```
 
 #### Vantagens
 - ✅ **Formulários avançados**: Campos condicionais
 - ✅ **Design profissional**: Templates prontos
+- ✅ **Rápido**: 1 dia para implementar
 
 #### Desvantagens
 - ❌ **Custo adicional**: JotForms + GHL
@@ -156,12 +132,13 @@ Semana 2: Deploy
 
 ### **Para design específico**: GHL + Custom Form
 - Quando precisa de design único
-- Tempo para desenvolver
+- 1 dia para desenvolver
 - Controle total sobre UX
 
 ### **Para formulários complexos**: GHL + JotForms
 - Campos condicionais
 - Cálculos automáticos
+- 1 dia para implementar
 - Orçamento para duas plataformas
 
 ---

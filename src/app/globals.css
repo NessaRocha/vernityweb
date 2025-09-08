@@ -259,38 +259,8 @@ a,
    - Funciona como fallback se o GHL não estiver configurado corretamente
 */
 
-/* Estilos mínimos para iframe GHL - performance otimizada */
-iframe[src*="leadconnectorhq.com"] {
-  /* Apenas estilos essenciais para performance */
-  min-width: 100%;
-  min-height: 500px;
-}
-
-/* Nota: IDs duplicados no GHL devem ser corrigidos no painel do GHL */
-/* CSS não pode modificar IDs dentro de iframes de domínios diferentes */
-
-/* Estilos para melhorar acessibilidade do formulário GHL */
-.ghl-form-container {
-  /* Garantir que o container tenha foco adequado */
-  outline: none;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-/* Estilos mínimos para container - performance otimizada */
-.ghl-form-container iframe {
-  /* Apenas estilos essenciais */
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-/* Estilos mínimos para mobile - performance otimizada */
-@media (max-width: 768px) {
-  iframe[src*="leadconnectorhq.com"] {
-    min-height: 400px;
-    width: 100%;
-  }
-}
+/* REMOVIDO: Estilos que podem interferir no funcionamento do formulário GHL */
+/* O iframe GHL deve funcionar sem interferência de CSS externo */
 
 /* Estilos para mensagens de confirmação do GHL */
 .ghl-form-confirmation {
