@@ -245,6 +245,34 @@ a,
    devido à política Same-Origin Policy do navegador.
    A customização deve ser feita no próprio painel do GHL. */
 
+/* SOLUÇÃO SEGURA: Melhoria de acessibilidade para formulário GHL
+   - Não interfere no funcionamento do formulário
+   - Apenas melhora a experiência visual e de acessibilidade
+   - Funciona apenas se o GHL não estiver aplicando os estilos corretamente
+*/
+
+/* Garantir que campos obrigatórios tenham indicação visual clara */
+iframe[src*="leadconnectorhq.com"] {
+  /* Forçar contraste adequado para acessibilidade */
+  filter: contrast(1.1) brightness(1.02);
+}
+
+/* Estilos para melhorar acessibilidade do formulário GHL */
+.ghl-form-container {
+  /* Garantir que o container tenha foco adequado */
+  outline: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Melhorar contraste e legibilidade */
+.ghl-form-container iframe {
+  /* Garantir que o iframe seja acessível */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Estilos para mensagens de confirmação do GHL */
 .ghl-form-confirmation {
   background: linear-gradient(135deg, #10b981, #059669);

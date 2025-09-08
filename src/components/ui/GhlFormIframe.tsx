@@ -19,7 +19,7 @@ export default function GhlFormIframe({ url }: Props) {
   };
 
   return (
-    <div className="relative" style={{ minHeight: 600 }}>
+    <div className="relative ghl-form-container" style={{ minHeight: 600 }}>
       {/* Placeholder enquanto não carrega */}
       {!isLoaded && (
         <div 
@@ -51,6 +51,9 @@ export default function GhlFormIframe({ url }: Props) {
         allow="forms"
         // Preload hints para melhor performance
         data-preload="true"
+        // Atributos de acessibilidade
+        role="form"
+        aria-label="Formulário de contato"
       />
     </div>
   );
