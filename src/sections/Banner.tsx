@@ -54,6 +54,7 @@ export default function Banner() {
                 className="relative z-10 mb-6 md:mb-8 leading-tight text-white px-1 sm:px-2 
                            font-bold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 
                            drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+                style={{ fontSize: 'clamp(0.875rem, 2.5vw, 1.875rem)' }}
                 aria-live="polite"
                 aria-label="Título principal com animação de entrada"
               >
