@@ -259,8 +259,19 @@ a,
    - Funciona como fallback se o GHL não estiver configurado corretamente
 */
 
-/* REMOVIDO: Estilos que podem interferir no funcionamento do formulário GHL */
-/* O iframe GHL deve funcionar sem interferência de CSS externo */
+/* Estilos seguros para melhorar acessibilidade do iframe GHL */
+.ghl-form-container iframe {
+  /* Garantir que o iframe seja acessível */
+  border: none;
+  outline: none;
+}
+
+/* Melhorar foco e navegação por teclado */
+.ghl-form-container:focus-within {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
 
 /* Estilos para mensagens de confirmação do GHL */
 .ghl-form-confirmation {

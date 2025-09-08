@@ -14,8 +14,48 @@ export default function GhlFormIframe({ url }: Props) {
     console.log('GHL Form iframe carregado - customização deve ser feita no painel GHL');
   }, []);
 
+  // Função para corrigir IDs duplicados no iframe (quando possível)
+  const fixDuplicateIds = () => {
+    try {
+      // Tentativa de acessar o iframe (pode falhar devido à Same-Origin Policy)
+      const iframe = document.querySelector('iframe[src*="leadconnectorhq.com"]') as HTMLIFrameElement;
+      if (iframe && iframe.contentDocument) {
+        const doc = iframe.contentDocument;
+        const inputs = doc.querySelectorAll('input, textarea, select');
+        const idCounts: { [key: string]: number } = {};
+        
+        // Contar IDs
+        inputs.forEach((input) => {
+          const id = input.getAttribute('id');
+          if (id) {
+            idCounts[id] = (idCounts[id] || 0) + 1;
+          }
+        });
+        
+        // Corrigir IDs duplicados
+        Object.keys(idCounts).forEach((id) => {
+          if (idCounts[id] > 1) {
+            const elements = doc.querySelectorAll(`#${id}`);
+            elements.forEach((element, index) => {
+              if (index > 0) {
+                element.setAttribute('id', `${id}_${index + 1}`);
+              }
+            });
+          }
+        });
+        
+        console.log('IDs duplicados corrigidos no formulário GHL');
+      }
+    } catch (error) {
+      // Same-Origin Policy impede acesso - isso é normal e esperado
+      console.log('Não foi possível acessar o iframe GHL (Same-Origin Policy) - IDs devem ser únicos no painel GHL');
+    }
+  };
+
   const handleIframeLoad = () => {
     setIsLoaded(true);
+    // Tentar corrigir IDs duplicados após o iframe carregar
+    setTimeout(fixDuplicateIds, 1000);
   };
 
   return (
