@@ -17,8 +17,8 @@ Implementação de formulário de contato customizado que salva dados no Google 
 
 ### **3. Integração na Página**
 - **Arquivo**: `src/sections/Connect.tsx`
-- **Funcionalidade**: Botões para alternar entre GHL e formulário customizado
-- **Resultado**: Mantém sistema existente + adiciona nova funcionalidade
+- **Funcionalidade**: Formulário customizado como padrão (GHL desabilitado temporariamente)
+- **Resultado**: Foco total no Google Sheets + Email, GHL mantido no código para futura implementação
 
 ## 🔧 Tecnologias Utilizadas
 
@@ -53,7 +53,7 @@ Implementação de formulário de contato customizado que salva dados no Google 
 - ✅ **Controle total** dos dados de contato
 - ✅ **Backup automático** no Google Sheets
 - ✅ **Notificações instantâneas** por email
-- ✅ **Independência** de serviços terceiros
+- ✅ **Independência** do GHL (mantido para futuro)
 - ✅ **Customização completa** do formulário
 
 ### **Para o Usuário:**
@@ -115,6 +115,13 @@ SENDGRID_API_KEY=SG.abc123...xyz789
 - ✅ **Deploy automático** configurado
 - ⏳ **Aguardando configuração** de variáveis de ambiente
 
+## 🔄 Status do GHL
+
+- ⏸️ **GHL Desabilitado**: Formulário GHL temporariamente oculto
+- 💾 **Código Mantido**: GHL permanece no projeto para futura implementação
+- 🎯 **Foco Atual**: Google Sheets + Email como sistema principal
+- 🔧 **Reativação**: Pode ser facilmente reativado quando necessário
+
 ## 📈 Próximos Passos
 
 1. **Configurar Google Sheets** (seguir guia em `docs/google-sheets-setup.md`)
@@ -136,9 +143,10 @@ SENDGRID_API_KEY=SG.abc123...xyz789
 - Backup automático no Google Sheets
 - Notificações por email
 - Controle total dos dados
-- Zero dependência de terceiros para armazenamento
+- GHL mantido no código para futura implementação
 
-**Status**: ✅ **PRONTO PARA PRODUÇÃO**
+**Status**: ✅ **PRONTO PARA PRODUÇÃO**  
+**GHL**: ⏸️ **DESABILITADO TEMPORARIAMENTE**
 
 ---
 
