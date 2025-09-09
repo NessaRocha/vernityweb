@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import { Container, GhlFormIframe } from '@/components/ui';
+import { Container } from '@/components/ui';
+import { CustomContactForm } from '@/components/ui/CustomContactForm';
 
 export default function Connect() {
-  // URL do formulário GHL - Sites → Forms → (seu formulário) → Integrate/Embed → copiar URL completa
-  const GHL_FORM_URL = "https://api.leadconnectorhq.com/widget/form/0aIDsHXZl6w4uZQXecUo";
+  // Formulário customizado integrado com Google Sheets e envio de email para nessasim@hotmail.com
 
   return (
     <>
@@ -196,9 +196,11 @@ export default function Connect() {
             </div>
           </div>
 
-          {/* Coluna Direita - Formulário GHL */}
+          {/* Coluna Direita - Formulário Customizado (Google Sheets + Email) */}
           <div>
-            <GhlFormIframe url={GHL_FORM_URL} />
+            <div className="bg-white rounded-lg p-6">
+              <CustomContactForm />
+            </div>
           </div>
         </div>
       </Container>

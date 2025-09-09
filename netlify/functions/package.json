@@ -1,0 +1,9 @@
+{
+  "name": "netlify-functions",
+  "version": "1.0.0",
+  "description": "Dependências para Netlify Functions",
+  "dependencies": {
+    "google-spreadsheet": "^4.1.2",
+    "@sendgrid/mail": "^8.1.0"
+  }
+}
