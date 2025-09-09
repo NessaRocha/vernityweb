@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Container } from '@/components/ui';
-import { CustomContactForm } from '@/components/ui/CustomContactForm';
+import { SimpleContactForm } from '@/components/ui/SimpleContactForm';
 
 export default function Connect() {
   // Formulário customizado integrado com Google Sheets e envio de email para nessasim@hotmail.com
@@ -198,9 +198,7 @@ export default function Connect() {
 
           {/* Coluna Direita - Formulário Customizado (Google Sheets + Email) */}
           <div>
-            <div className="bg-white rounded-lg p-6">
-              <CustomContactForm />
-            </div>
+            <SimpleContactForm />
           </div>
         </div>
       </Container>

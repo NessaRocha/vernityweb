@@ -7,15 +7,19 @@ interface ButtonProps {
   size?: "sm" | "md" | "lg";
   className?: string;
   onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
 export default function Button({ 
   children, 
   href, 
   variant = "primary", 
-  size = "md",
-  className = "",
-  onClick 
+  size = "md", 
+  className = "", 
+  onClick,
+  type = "button",
+  disabled = false
 }: ButtonProps) {
   const baseClasses = "font-semibold rounded-lg transition-colors inline-block";
   
@@ -31,7 +35,8 @@ export default function Button({
     lg: "px-8 py-4 text-lg"
   };
   
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  const disabledClasses = disabled ? "opacity-50 cursor-not-allowed" : "";
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
   
   if (href) {
     return (
@@ -42,7 +47,12 @@ export default function Button({
   }
   
   return (
-    <button onClick={onClick} className={classes}>
+    <button 
+      type={type}
+      disabled={disabled}
+      onClick={onClick} 
+      className={classes}
+    >
       {children}
     </button>
   );

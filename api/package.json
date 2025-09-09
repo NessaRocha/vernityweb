@@ -1,0 +1,9 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API functions for Vercel",
+  "dependencies": {
+    "google-spreadsheet": "^4.1.2",
+    "@sendgrid/mail": "^8.1.0"
+  }
+}

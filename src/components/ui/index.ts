@@ -7,4 +7,4 @@ export { default as GhlFormIframe } from './GhlFormIframe';
 export { default as ProjectCard } from './ProjectCard';
 export { default as Skeleton } from './Skeleton';
 export { default as DynamicTemplateLoader } from './DynamicTemplateLoader';
-export { CustomContactForm } from './CustomContactForm';
+export { SimpleContactForm } from './SimpleContactForm';
